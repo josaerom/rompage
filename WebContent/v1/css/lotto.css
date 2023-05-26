@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+/* 데스크톱 */
+.spot{background: url(/v1/img/resume/resume.jpg) no-repeat;background-size: cover;}
+/* result */
+.result_wrap{font-size: 18px; text-align: center; line-height: 1.5;}
+.result_wrap .title{margin: 20px 0; font-size: 28px;}
+.title_cnt{font-weight: bold; color: #db0000;}
+.bonus {width: auto; display: inline-block;}
+/* create */
+ul.num {display: inline-block;}
+ul.num li{float: left; margin: 0 5px;}
+ul.num input,
+	.num_wrap span{width: 60px; height: 60px;border-radius: 70px; -moz-border-radius: 70px; -khtml-border-radius: 70px; -webkit-border-radius: 70px; text-align: center; font-size: 25px; font-weight: bold; }
+	.num_wrap span{display:inline-block; line-height: 2.3;}
+ul.num::AFTER{content: ''; display: block; clear: both;}
+.num_bg_1,.num_bg_2,.num_bg_3,.num_bg_4, .num_bg_5, .num_bg_6, .num_bg_7, .num_bg_8, .num_bg_9 {background-color: #ffffac;}
+.num_bg_10,.num_bg_11,.num_bg_12, .num_bg_13, .num_bg_14, .num_bg_15, .num_bg_16, .num_bg_17, .num_bg_18, .num_bg_19 {background-color: #cbe8ff;}
+.num_bg_20,.num_bg_21,.num_bg_22, .num_bg_23, .num_bg_24, .num_bg_25, .num_bg_26, .num_bg_27, .num_bg_28, .num_bg_29 {background-color: #ffcbcb;}
+.num_bg_30,.num_bg_31,.num_bg_32, .num_bg_33, .num_bg_34, .num_bg_35, .num_bg_36, .num_bg_37, .num_bg_38, .num_bg_39 {background-color: #dddddd;}
+.num_bg_40,.num_bg_41,.num_bg_42, .num_bg_43, .num_bg_44, .num_bg_45{background-color: #ceffcb;}
+.btn_wrap {margin-top: 50px;}
+
+/* list */
+.lotto_list {padding: 15px 0; text-align: center; border-bottom: #eee 1px solid;}
+.lotto_list > div {width:auto; display: inline-block;}
+.lotto_list [class*=num] {display:inline-block; width: 43px; height: 43px; border:#fff 3px solid;  border-radius: 70px; -moz-border-radius: 70px; -khtml-border-radius: 70px; -webkit-border-radius: 70px; text-align: center; font-size: 15px; font-weight: bold; line-height: 38px;}
+.fav{background-color: #f3f3f3;}
+.list_r{margin-left: 30px;}
+.list_btn_wrap{display:inline; margin-left: 20px;}
+
+.bg_red{border-color:#db0000 !important; color: #db0000;}
+.bg_blue{border-color:#4173b3 !important; color: #4173b3;}
+
+/* 태블릿: 1024 이하 */
+@media handheld, only screen and (max-width: 1023px) {
+	
+}
+/* 스마트 폰: 767px 이하 */
+@media handheld, only screen and (max-width: 767px) {
+	ul.num li{float: left; margin: 0 2px;}
+	ul.num input,
+		.num_wrap span {width: 40px; height: 40px; font-size: 14px;}
+	.num_wrap span{display:inline-block; line-height: 3;}
+	.btn_wrap button{margin-top: 5px;}
+	.create_btn{width: 100%;}
+	
+	.list_r{margin-left: 0; margin-top: 10px;}
+	.list_btn_wrap{display:inline-block; margin-left: 0;  margin-top: 10px;}
+	.lotto_list [class*=num] {width: 40px; height: 40px;line-height: 35px;} 
+	
+	.bonus{display: block; margin-top: 10px;}
+}
+/* 아이폰 4 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {  	
+
+}

@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+/* header */
+
+.spot{background: url(/v1/img/resume/resume.jpg) no-repeat;background-size: cover;}
+/* 바로가기 */
+.quick_wrap{margin: 0 auto; width: 70%; margin-bottom: 50px;}
+.quick_wrap button{margin-bottom: 5px;}
+/* 기본정보 */
+.info.table > div {width:50%; padding-left: 20px;}
+.info.table > div+div {vertical-align: middle;}
+.info_name{font-size: 20px; font-weight: bold;}
+.info_eng_name{font-size: 13px; color: #808080;}
+.info.table img{max-width: 100%;}
+/* 학력 */
+.school_list {text-align: center; }
+.school_list > div{display:inline-block; margin: 0 auto; margin-left:-4px; margin-bottom:20px; /* float: left; */ width:220px; height:300px; background: url(/v1/img/resume/shool_next.png) no-repeat right 55px; text-align: center;}
+.school_list > div:LAST-CHILD {background: none;}
+.school_list img {width:115px; height: 115px; border: 2px solid #4173b3; border-radius: 70px; -moz-border-radius: 70px; -khtml-border-radius: 70px; -webkit-border-radius: 70px;}
+.school_list h5 {padding-top:5px; font-weight: bold; font-size: 15px;}
+.school_bg {display:block; margin-top:-191px; border-top:1px solid #4173b3;}
+
+/* 자기소개서 */
+.table {display: table;height:auto;}
+.cell {display:table-cell;padding: 20px;width: 30%;vertical-align:top;}
+.cell + .cell{width: 65%;}
+.container {margin-top:20px;height: 80%;overflow:auto;-moz-box-sizing: border-box;background-color: #eee;}
+.self_txt>div { margin-bottom: 50px;}
+.slide_wrap { position: relative; width: 100%; overflow: hidden; }
+.slide_wrap img {width: 100%;}
+
+.intro_section{margin-top:100px;filter: alpha(opacity=0);opacity: 0;transition:margin-top .5s ease, opacity .5s ease;}
+.intro_section.on {margin-top:0; filter: alpha(opacity=100);opacity: 1;}
+
+/* 태블릿: 1024 이하 */
+@media handheld, only screen and (max-width: 1023px) {
+}
+/* 스마트 폰: 767px 이하 */
+@media handheld, only screen and (max-width: 767px) {
+	.spot{background: url(/v1/img/resume/mobile_resume.jpg) no-repeat;}
+	
+	.quick_wrap{width: 100%;text-align: center;}
+	.quick_wrap button{min-width: 140px;}
+	table, thead, tbody, th, td, tr {display: block;text-align: center;}
+    thead tr {position: absolute;top: -9999px;left: -9999px;}
+    tbody td{min-height:35px; height:auto; border: 0;}
+    tbody tr{border-bottom: #d0d1d2 1px solid;}
+    tbody tr:LAST-CHILD{border: 0;}
+    .cell {padding: 10px;}
+    .self_wrap .table {display: block;}
+	.self_wrap .cell {display: block;width: 100%;}
+	.self_wrap .cell + .cell{width: 100%;}
+	.container {display: none;}
+}

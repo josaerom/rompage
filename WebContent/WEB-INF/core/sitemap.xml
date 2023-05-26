@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site-menu>
+  <topmenue id="rompage" name="ROMPAGE">
+  	<url></url>
+  	<child>
+  		<menu id="" name="">
+  			<url></url>
+  			<auth></auth>
+  			<child>
+  				<menu id="" name="">
+		  			<url></url>
+		  			<auth></auth>
+		  		</menu>
+  			</child>
+  		</menu>
+  	</child>
+  </topmenue>
+</site-menu>

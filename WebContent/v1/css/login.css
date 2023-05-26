@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+#login_wrap {width: 100%;height: 80%;background-color: #92bdc0;}
+#login_container {margin: 0 auto; width: 28%;}	
+
+.login {margin-bottom: 20px;}
+.login .input_box {position: relative;z-index: 5;width: 100%;height: 32px;zoom: 1;}
+.input_box + .input_box {margin-top: 10px;}
+.login .lbl_in {position: absolute; top: 6px; left: 6px; z-index: 2; background: #fff; font-size: 14px; line-height: 16px;color: #fff;}
+.login .int {position: relative;z-index: 3;margin:0; padding: 0 20px; width: 100%;height: 32px; border:0;border-bottom: #fff 1px solid;background: #92bdc0; font-size:14px; -webkit-appearance: none;zoom: 1;}
+
+.keeping{padding-left:10px; width: 100%;}
+.keeping button{width: 100%; height:74px; border: #fff 1px solid; border-radius:8px; font-size:22px; background-color: #fff; color: #92bdc0;}
+.keeping button:HOVER,
+	.keeping button:FOCUS {background-color: #92bdc0; color: #fff;}
+.btn_lnk a{display:block; width:100%;border:#fff 1px solid;border-radius:8px;background-color:transparent;text-align:center; font-size: 22px; line-height:55px; color: #fff;}
+.btn_lnk a+a{margin:0; margin-top: 10px;}
+.btn_lnk a:HOVER,
+	.btn_lnk a:FOCUS {background-color: #fff; text-decoration:none; color: #92bdc0;}
+
+/* footer */
+#footer {background-color: #fff;height: 10%;}
+.copyright {padding:0; padding-left:31px; color: #747474; background: url(/v1/img/common/logo_footer.png) no-repeat;}
+/* 태블릿: 1024 이하 */
+@media handheld, only screen and (max-width: 1023px) {
+	#login_container {width: 37%;}	
+}
+/* 스마트 폰: 767px 이하 */
+@media handheld, only screen and (max-width: 767px) {
+	.login.section_7n3>div{display:block; float:none; width: 100%; height:auto;}
+	.login.section_7n3>div+div{display:block; float:none; width: 100%; height:auto;}
+	#login_container {width: 50%;}	
+	.keeping{padding:0; margin-top:10px; margin-left:-2px; padding-left:0;}
+	.keeping button{width: 100%; height:auto; border: #fff 1px solid; border-radius:8px; font-size:22px; line-height:40px; background-color: #fff; color: #92bdc0;}
+	.btn_lnk a{line-height:40px;}
+}

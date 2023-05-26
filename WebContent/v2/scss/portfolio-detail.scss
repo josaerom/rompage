@@ -1,0 +1,108 @@
+.portfolio-detail {}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: #111;
+    margin-bottom: 70px;
+    line-height: 1;
+}
+
+.title-wrap {
+    width: 100%;
+    border-top: 2px solid #333333;
+    padding: 32px 3%;
+}
+
+.title {
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.body-wrap {
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    padding: 80px 3% 200px;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: -0.25px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+dt:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background: #ec0928;
+    vertical-align: top;
+}
+
+dt {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+}
+
+dd {
+    display: inline;
+    font-size: 20px;
+}
+
+dd:after {
+    display: block;
+    content: '';
+}
+
+p {}
+
+.detail-desc {
+    padding: 50px;
+    margin: 50px 0;
+    border: #eee 1px solid;
+    font-size: 20px;
+}
+
+.pagination-list-wrap {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-button {
+    width: 215px;
+    height: 65px;
+    background: #403e41;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-button:before {
+    display: block;
+    content: "";
+    background: url(/v2/image/portfolio/board_btn_type1.png)no-repeat center;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+}

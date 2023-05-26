@@ -1,0 +1,68 @@
+.fp-section.fp-table, .fp-slide.fp-table{
+	overflow: hidden;
+}
+.fp-tooltip.fp-nav {
+    text-indent: -9999px;
+}
+#fp-nav {
+	width: 1px;
+    right: 5%;
+	ul {
+	    float: right;
+	    margin-right: 5%;
+	    &:after {
+		    position: absolute;
+		    display: block;
+		    content: "";
+		    width: 1px;
+		    height: 93%;
+		    top: 50%;
+		    margin-left: 13px;
+		    background: url(/v2/image/main/side_nav_dot_icon.png);
+		    background-repeat: repeat-y;
+		    transform: translateY(-50%);
+		}
+		li{
+			margin-top : 55px;
+			&:first-child {
+				margin-top : 0;
+			}
+			a{
+				span{
+					width : 5px;
+					height : 5px;
+					left : 46%;
+					&:before {
+					    opacity: 0;
+					    transform: scale(0);
+					    transition: 0.5s;
+					    content: '';
+					    width: 45px;
+					    height: 45px;
+					    border-radius: 100%;
+					    border: 1px solid #000;
+					    position: absolute;
+					    top: 50%;
+					    left: 50%;
+					    margin-top: -23px;
+					    margin-left: -23px;
+					}
+				}
+				&.active{
+					span:before {
+					    opacity: 1;
+					    transform: scale(1);
+					    transition: 0.5s;
+					}
+				}
+			}
+		}
+	}
+	
+} 
+
+@include screen(custom, max, $max-tb){
+	#fp-nav ul li a.active span:before{
+		content:none;
+	}	
+}

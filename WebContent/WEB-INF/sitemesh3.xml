@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+	<!-- v1.0 -->
+  <mapping path="/resume/*" decorator="/v1/template/template.jsp"/>
+  <mapping path="/portfolio/portfolio.cmd" decorator="/v1/template/template.jsp"/>
+  <mapping path="/portfolio/detail.cmd" decorator="/v1/template/template.jsp"/>
+  <mapping path="/admin/*" decorator="/v1/template/template.jsp"/>
+  <mapping path="/rompage/*" decorator="/v1/template/template.jsp"/>
+  <mapping path="/gallery/*" decorator="/v1/template/template.jsp"/>
+  <mapping path="/error/*" decorator="/v1/template/template.jsp"/>
+  <mapping path="/lotto/lotto.cmd" decorator="/v1/template/template.jsp"/>  
+  <mapping path="/index_v1.jsp" exclude="true" />
+  <mapping path="/login/*" exclude="true" />
+  
+  <!-- v2.0 -->
+  <mapping path="/index.jsp" decorator="/v2/template/template.jsp"/>  
+  <mapping path="/portfolio" decorator="/v2/template/template.jsp"/>
+  <mapping path="/portfolio/*" decorator="/v2/template/template.jsp"/>
+</sitemesh>

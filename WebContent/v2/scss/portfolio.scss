@@ -1,0 +1,226 @@
+@import './common/utilites';
+.portfolio-list {
+    margin: 50px 0;
+}
+.sort-box {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 14px 14px 14px 30px;
+	background-color: #f3f3f3;
+	margin: 20px 0;
+	.sort-label {
+	    font-size: 15px;
+	    line-height: 3;
+	}
+	.sort {
+		-webkit-box-pack: end;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+	.download {
+	    -webkit-box-pack: end;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-pack: start;
+	    -ms-flex-pack: end;
+	    justify-content: flex-start;
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1;
+	    flex: 1;
+	    button {
+		    width: 300px;
+		    height: 65px;
+		    background: #ec0928;
+		    color: #fff;
+		}
+		button:after {
+		    display: inline-block;
+		    content: "";
+		    width: 19px;
+		    height: 18px;
+		    background: url(/common/img/page/file_download.png)no-repeat center;
+		    vertical-align: top;
+		    margin-left: 10px;
+		}
+	}
+}
+
+.pp-wrap{
+	div {
+	    height: 0;
+	    padding-bottom: 57%;
+	    overflow: hidden;
+	    &:after {
+		    background: url(/v2/image/portfolio/board_more_btn2.png)no-repeat center;
+		    display: block;
+		    content: "";
+		    position: absolute;
+		    top: 0px;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0;
+		    transition: all 0.2s;
+		}
+	}
+	ul {
+		&:after{
+			content: '';
+	    	display: block;
+	    	clear: both;
+		}
+	    li {
+		    float: left;
+		    margin-right: 2%;
+		    position: relative;
+		    display: block;
+		    width: 32%;
+		    margin-bottom: 40px;
+		    &:nth-child(3n) {
+			    margin-right: 0;
+			}
+		}
+		a {
+		    display: block;
+		    height: auto;
+		    width: 100%;
+		    border: 1px solid #eee;
+		    &:hover {
+				text-decoration: none;
+				img {
+				    transform: scale(1.1);
+				}
+				&:after {display: block;content:""; position:absolute; top:0;left:0;width:100%; height:100%; border: 2px solid #ed1431;z-index:0;box-shadow:5px 10px 10px rgba(0,0,0,0.06);box-sizing:border-box;}
+				
+				div:after {
+				    opacity: 1;
+				    transition:all 0.2s;
+				}
+			}
+			h3 {
+			    font-size: 17px;
+			    padding: 18px;
+			    height: 0;
+			    margin-bottom: 6%;
+			}
+			img {
+				width: 100%;
+			    height: auto;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+			    transform: scale(1);
+			    -o-transform: scale(1);
+			    -moz-transform: scale(1);
+			    -webkit-transform: scale(1);
+			    transition: transform .7s;
+			    -o-transition: transform .7s;
+			    -moz-transition: transform .7s;
+			    -webkit-transition: transform .7s;
+			}	
+		}
+	}
+}
+
+.pagination {
+	text-align: center;
+	margin: 20px 0;
+	button {
+	    display: inline-block;
+	    vertical-align: top;
+	    width: 40px;
+	    height: 40px;
+	    box-sizing: border-box;
+	    font-family: "Montserrat";
+	    font-size: 15px;
+	    font-weight: 500;
+	    line-height: 38px;
+	    color: #a8a8a8;
+	    transition: 0.2s;
+	    margin: 0 3px;
+	    border: 1px solid #aaaaaa;
+	}
+	.first {
+	    background: url(/v2/image/common/paging_first.png) no-repeat center;
+	}	
+	.next {
+	    background: url(/v2/image/common/paging_next.png) no-repeat center;
+	}
+	.prev {
+	    background: url(/v2/image/common/paging_prev.png) no-repeat center;
+	}
+	.last {
+	    background: url(/v2/image/common/paging_last.png) no-repeat center;
+	}
+	.navigation {
+	    display: inline-block;
+	    padding: 0 30px;
+	    li {
+	    	display: inline;
+	    	float: left;
+	    	&.active button {
+			    background: #403e41;
+			    color: #fff;
+			    border: 0;
+			}
+	    }
+	}
+
+}
+
+@include screen(custom, max, $max-lg){
+	.pp-wrap{		
+		ul{
+			li {
+			    width: 49%;
+			    &:nth-child(3n) {
+				    margin-right: 2%;
+				}
+			    &:nth-child(2n) {
+				    margin-right: 0;
+				}
+			}
+		}
+				
+	}
+}
+@include screen(custom, max, $max-sm){
+	.pp-wrap{
+		ul{
+			li {
+			    width: 100%;
+			    margin-right: 0;
+			    margin-bottom: 25px;
+			    &:nth-child(3n) {
+				    margin-right: 0;
+				}
+			    &:nth-child(2n) {
+				    margin-right: 0;
+				}
+			}
+		}
+	}
+	.pagination {
+		button {
+		    width: 30px;
+		    height: 30px;
+		    font-size: 14px;
+		    line-height: 28px;
+		}
+		.navigation {
+		    padding: 0 10px;
+		}
+	}
+}
