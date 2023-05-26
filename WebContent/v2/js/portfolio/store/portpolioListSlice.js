@@ -1,20 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const list = createSlice({
-  name : 'list',
-  initialState : [],
-  reducers : {
-    setList(state, action ){
-      console.log(state)
-      console.log(action.payload)
-      action.payload.map((item)=>{
-        console.log(item)
-        state.push(item)
+const portpolioListStore = createSlice({
+  name: 'portpolioListStore',
+  initialState: {
+    totalPosts: [],
+    currentPosts: [],
+    postsPrePage : 6, 
+  },
+  reducers: {
+    setTotalPosts(state, action) {
+      action.payload.map((item) => {
+        state.totalPosts.push(item)
+      })
+    },
+    setCurrentPosts(state, action) {
+      let currentPage = action.payload;
+      const indexOfLast = currentPage * state.postsPrePage;
+		  const indexOfFirst = indexOfLast - state.postsPrePage;
+
+      state.currentPosts = state.totalPosts.slice(indexOfFirst, indexOfLast);
+    },
+    setSort(state, action){
+      state.totalPosts.sort((a,b)=>{
+        
       })
     }
   }
 })
 
-export let { setList } = list.actions;
+export let { setTotalPosts, setCurrentPosts } = portpolioListStore.actions;
 
-export default list;
+export default portpolioListStore;

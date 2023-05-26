@@ -1,8 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let currentPage = createSlice({
-    name : 'currentPage',
-    initialState : 0
+let paginationStore = createSlice({
+  name: 'paginationStore',
+  initialState: {
+    currentPage: 1,
+  },
+  reducers: {
+    setCurrentPage(state, action) {
+      state.currentPage = action.payload;
+    }
+  }
 })
 
-export default currentPage;
+export let {setCurrentPage} = paginationStore.actions;
+
+export default paginationStore;
