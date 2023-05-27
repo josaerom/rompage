@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 
-import { setSort, setCurrentPosts } from '../../store/portpolioListSlice.js';
+import { setSort, setCurrentPosts } from '../../store/portfolioListSlice.js';
 import { setCurrentPage } from '../../store/paginationSlice.js'
 
 const Sort = () => {

@@ -2,11 +2,11 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
-import { setTotalPosts, setCurrentPosts } from "../../store/portpolioListSlice.js";
+import { setTotalPosts, setCurrentPosts } from "../../store/portfolioListSlice.js";
 
 const List = () => {
   let dispatch = useDispatch();
-  let { totalPosts, currentPosts } = useSelector((state) => state.portpolioListStore);
+  let { totalPosts, currentPosts } = useSelector((state) => state.portfolioListStore);
 
   useEffect(() => {
     axios.post('/portfolio/getPortfolioList.ajax', null,

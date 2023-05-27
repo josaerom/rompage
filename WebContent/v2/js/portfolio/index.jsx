@@ -7,11 +7,9 @@ import App from './App.jsx';
 const root = ReactDOM.createRoot(document.getElementById('portfolio'))
 
 root.render(
-  
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
 reportWebVitals();

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const portpolioListStore = createSlice({
-  name: 'portpolioListStore',
+const portfolioListStore = createSlice({
+  name: 'portfolioListStore',
   initialState: {
     totalPosts: [],
     currentPosts: [],
@@ -40,6 +40,6 @@ const portpolioListStore = createSlice({
   }
 })
 
-export let { setTotalPosts, setCurrentPosts, setSort } = portpolioListStore.actions;
+export let { setTotalPosts, setCurrentPosts, setSort } = portfolioListStore.actions;
 
-export default portpolioListStore;
+export default portfolioListStore;

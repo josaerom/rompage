@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 
 import { setCurrentPage } from '../../store/paginationSlice.js';
-import { setCurrentPosts } from '../../store/portpolioListSlice.js';
+import { setCurrentPosts } from '../../store/portfolioListSlice.js';
 
 const Pagination = () => {
-  let { totalPosts, postsPrePage } = useSelector((state) => state.portpolioListStore);
+  let { totalPosts, postsPrePage } = useSelector((state) => state.portfolioListStore);
   let { currentPage } = useSelector((state) => state.paginationStore)
 
   let pageCount = Math.ceil(totalPosts.length / postsPrePage);
