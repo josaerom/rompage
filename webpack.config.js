@@ -5,7 +5,7 @@ module.exports = {
   mode: "development",
   entry: {
 	  portfolioList: "./WebContent/v2/js/portfolio/index.jsx",
-	  portfolioDetail : "./WebContent/v2/js/portfolio/portfolioDetail.jsx",
+	  //portfolioDetail : "./WebContent/v2/js/portfolio/portfolioDetail.jsx",
   },
   output:{
 	  path : path.resolve(__dirname, 'WebContent/v2/js/portfolio/dist'),
