@@ -14,7 +14,7 @@ const App = () => {
             <PortfolioList />
           </Provider>
         } />
-        <Route path='/portfolio/detail' element={<PortfolioDetail />} />
+        <Route path='/portfolio/detail/:portfolioId' element={<PortfolioDetail />} />
       </Routes>
     </>
   )

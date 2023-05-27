@@ -1,7 +1,15 @@
+import Detail from "../components/portfolioDetail/Detail.jsx";
+import Pagination from "../components/portfolioDetail/Pagination.jsx";
+
+import { DetailProvider } from "../store/portfolioDetailContext.jsx";
+
 const PortfolioDetail = () => {
   return (
     <>
-      포트폴리오 상세
+      <DetailProvider>
+        <Detail />
+        <Pagination />
+      </DetailProvider>
     </>
   )
 }

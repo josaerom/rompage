@@ -29,9 +29,19 @@ public class getPortfolioDetail{
 		List detail = new ArrayList();
 		detail = (List)dao.portDetailSelect(rNum);
 		
+		//포트폴리오 이전페이지,다음페이지정보
+		beanPortfolio prev = new beanPortfolio();
+		prev = dao.portPrev(rNum);
+		//포트폴리오 이전페이지,다음페이지정보
+		beanPortfolio next = new beanPortfolio();
+		next = dao.portNext(rNum);
+		
+		
 		Map<String, Object> all = new HashMap<>();
 		all.put("info", info);
 		all.put("detail", detail);
+		all.put("prev", prev);
+		all.put("next", next);
 		
 		return all;
 	}

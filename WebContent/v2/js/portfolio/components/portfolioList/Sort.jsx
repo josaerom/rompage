@@ -17,7 +17,6 @@ const Sort = () => {
   }
 
   const sortby = (e) => {
-    console.log(e.target.value);
     dispatch(setSort(e.target.value))
     dispatch(setCurrentPosts(1));
     dispatch(setCurrentPage(1));

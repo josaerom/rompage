@@ -144,6 +144,57 @@ public class portfolioDAO {
 		
 		return list;		
 	}
+	
+	//포트폴리오 이전페이지
+	public beanPortfolio portPrev(int pNum) throws Exception {
+		beanPortfolio bean = new beanPortfolio();
+		
+		String sql = "";
+		con = ds.getConnection();
+		sql = "SELECT t2.R_NUM, t1.THUMBNAIL_MEMO "
+				+ "FROM TB_PP_MAIN t1 INNER JOIN "
+				+ "("
+				+ "SELECT MIN(R_NUM) AS R_NUM, THUMBNAIL_MEMO FROM TB_PP_MAIN WHERE R_NUM > "+pNum+" ORDER BY R_NUM DESC "
+				+ ") t2 ON t1.R_NUM = t2.R_NUM;";
+		stmt = con.createStatement();
+		rs = stmt.executeQuery(sql);
+		
+		while(rs.next()){
+			bean.setRNUM(rs.getString("R_NUM"));
+			bean.setTHUMBNAIL_MEMO(rs.getString("THUMBNAIL_MEMO"));
+		}
+		
+		if(rs!=null) try{rs.close();}catch(SQLException ex){}
+		if(stmt!=null) try{stmt.close();}catch(SQLException ex){}
+		if(con!=null) try{con.close();}catch(SQLException ex){}
+		
+		return bean;		
+	}
+	//포트폴리오 다음페이지
+	public beanPortfolio portNext(int pNum) throws Exception {
+		beanPortfolio bean = new beanPortfolio();
+		
+		String sql = "";
+		con = ds.getConnection();
+		sql = "SELECT t2.R_NUM, t1.THUMBNAIL_MEMO "
+				+ "FROM TB_PP_MAIN t1 INNER JOIN "
+				+ "( "
+				+ "SELECT MAX(R_NUM) AS R_NUM, THUMBNAIL_MEMO FROM TB_PP_MAIN WHERE R_NUM < "+pNum+" ORDER BY R_NUM DESC "
+				+ ") t2 ON t1.R_NUM = t2.R_NUM;";
+		stmt = con.createStatement();
+		rs = stmt.executeQuery(sql);
+		
+		while(rs.next()){
+			bean.setRNUM(rs.getString("R_NUM"));
+			bean.setTHUMBNAIL_MEMO(rs.getString("THUMBNAIL_MEMO"));
+		}
+		
+		if(rs!=null) try{rs.close();}catch(SQLException ex){}
+		if(stmt!=null) try{stmt.close();}catch(SQLException ex){}
+		if(con!=null) try{con.close();}catch(SQLException ex){}
+		
+		return bean;		
+	}
 		
 	//포트폴리오 메인등록
 	public int portfolioInsert(beanPortfolio bean) throws Exception{

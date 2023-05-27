@@ -4,13 +4,11 @@ import { setCurrentPage } from '../../store/paginationSlice.js';
 import { setCurrentPosts } from '../../store/portfolioListSlice.js';
 
 const Pagination = () => {
+  let dispatch = useDispatch();
   let { totalPosts, postsPrePage } = useSelector((state) => state.portfolioListStore);
   let { currentPage } = useSelector((state) => state.paginationStore)
 
   let pageCount = Math.ceil(totalPosts.length / postsPrePage);
-  console.log(pageCount);
-
-  let dispatch = useDispatch();
 
   const hendelCurrentPage = (idx) => {
     dispatch(setCurrentPosts(idx));
