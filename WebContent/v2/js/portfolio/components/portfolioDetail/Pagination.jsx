@@ -7,16 +7,31 @@ const Pagination = () => {
   console.log(portfolioNext);
   return (
     <>
-      {!!portfolioPrev.THUMBNAIL_MEMO &&
-        <Link to={`/portfolio/detail/${portfolioPrev.RNUM}`}>
-          <div> {portfolioPrev.THUMBNAIL_MEMO} </div>
-        </Link>
-      }
-      {!!portfolioNext.THUMBNAIL_MEMO &&
-        <Link to={`/portfolio/detail/${portfolioNext.RNUM}`}>
-          <div> {portfolioNext.THUMBNAIL_MEMO} </div>
-        </Link>
-      }
+      <div className="pagination-nav-wrap">
+        <dl>
+          {!!portfolioPrev.THUMBNAIL_MEMO &&
+            <>
+              <dt>다음 포트폴리오</dt>
+              <dd><Link to={`/portfolio/detail/${portfolioPrev.RNUM}`}>
+                {portfolioPrev.THUMBNAIL_MEMO}
+              </Link></dd>
+            </>
+          }
+          {!!portfolioNext.THUMBNAIL_MEMO &&
+            <>
+              <dt>이전 포트폴리오</dt>
+              <dd>
+                <Link to={`/portfolio/detail/${portfolioNext.RNUM}`}>
+                  {portfolioNext.THUMBNAIL_MEMO}
+                </Link>
+              </dd>
+            </>
+          }
+        </dl>
+      </div>
+      <div className="pagination-list-wrap">
+        <Link to="/portfolio" className="list-button">목록</Link>
+      </div>
     </>
   )
 }

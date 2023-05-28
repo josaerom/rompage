@@ -4,6 +4,7 @@
 .portfolio-list {
 	margin: 50px 0;
 }
+
 .pp-wrap {
 	div {
 		height: 0;
@@ -101,6 +102,7 @@
 		}
 	}
 }
+
 /*// 포트폴리오 리스트 */
 
 /* 포트폴리오 정렬 */
@@ -164,6 +166,7 @@
 		}
 	}
 }
+
 /*// 포트폴리오 정렬 */
 
 /* 포트폴리오 페이지네이션 */
@@ -220,6 +223,7 @@
 	}
 
 }
+
 /*// 포트폴리오 페이지네이션 */
 
 /* 포트폴리오 상세 */
@@ -228,7 +232,7 @@
 		text-align: center;
 		font-size: 36px;
 		font-weight: 400;
-		font-family: 'Helvetica Neue';
+		font-family: "Montserrat", "AppleGothic", "sans-serif", "Helvetica";
 		color: #111;
 		margin-bottom: 70px;
 		letter-spacing: -0.5px;
@@ -240,7 +244,6 @@
 		padding: 32px 3%;
 		border-bottom: 1px solid #c6c6c6;
 		text-align: center;
-		font-family: 'Helvetica Neue';
 		color: #000000;
 		font-weight: 600;
 		font-size: 28px;
@@ -267,6 +270,14 @@
 	.section {
 		text-align: center;
 		margin: 100px 0 70px;
+	}
+
+	.info-wrap {
+		width: 80%;
+    margin: 0 auto;
+    border: 1px solid #bdc8ca;
+
+		
 	}
 
 	dl {
@@ -317,7 +328,53 @@
 		clear: both;
 	}
 
+	a.list-button {
+		width: 215px;
+		height: 65px;
+		background: #403e41;
+		font-size: 18px;
+		color: #fff;
+		font-family: 'Helvetica Neue';
+		font-weight: 500;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	a.list-button:before {
+		display: block;
+		content: "";
+		background: url(/v2/image/portfolio/board_btn_type1.png)no-repeat center;
+		width: 13px;
+		height: 13px;
+		margin-right: 8px;
+	}
+
+	.pagination-list-wrap {
+		padding-top: 60px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		border-top: 1px solid;
+	}
+
+	.top-banner .top-banner-bg {
+		height: 600px;
+	}
+
+	section.top-banner.active.on {
+		transition: all 0.5s;
+	}
+
+	section.top-banner.active.on .top-banner-bg {
+		transform: scale(1.1);
+		transition: ease-in-out all 0.7s;
+	}
+
 }
+
 /*// 포트폴리오 상세 */
 
 @include screen(custom, max, $max-lg) {
