@@ -2,33 +2,26 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
-import { restTotalPosts, setTotalPosts, setCurrentPosts } from "../../store/portfolioListSlice.js";
+import { setTotalPosts, setCurrentPosts } from "../../store/portfolioListSlice.js";
 
 const List = () => {
   let dispatch = useDispatch();
   let { totalPosts, currentPosts } = useSelector((state) => state.portfolioListStore);
-  let test = 'test';
 
   useEffect(() => {
-    axios.post('/portfolio/getPortfolioList.ajax', null,
-      {
-        params: {
-          sort: 'DESC',
-        }
-      })
-      .then((data) => {
-        console.log('mount')
-        dispatch(setTotalPosts(data.data));
-        dispatch(setCurrentPosts(1));
-      })
-
-    return () => {
-      console.log('unmount')
-      //dispatch(restTotalPosts());
+    if (!!!totalPosts.length) {
+      axios.post('/portfolio/getPortfolioList.ajax', null,
+        {
+          params: {
+            sort: 'DESC',
+          }
+        })
+        .then((data) => {
+          dispatch(setTotalPosts(data.data));
+          dispatch(setCurrentPosts(1));
+        })
     }
-  }, [test]);
-
-
+  }, []);
 
   return (
     <>

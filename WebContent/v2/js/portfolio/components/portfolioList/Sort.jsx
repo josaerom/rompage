@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 import { setSort, setCurrentPosts } from '../../store/portfolioListSlice.js';
 import { setCurrentPage } from '../../store/paginationSlice.js'
@@ -22,14 +22,21 @@ const Sort = () => {
     dispatch(setCurrentPage(1));
   }
 
+  let { sortOrder } = useSelector((state) => state.portfolioListStore);
+  console.log(sortOrder)
+
   return (
-    <div className="sort">
-      <label className="sort-label">정렬</label>
-      <select id="sortList" onChange={(e) => sortby(e)}>
-        {
-          Object.values(sortType).map((item) => <option key={item} value={item}>{sortLabel[item]}</option>)
-        }
-      </select>
+    <div className="sort-box">
+      <div className="sort">
+        <label className="sort-label">정렬</label>
+        <select id="sortList" onChange={(e) => sortby(e)} defaultValue={sortOrder}>
+          {
+            Object.values(sortType).map((item) =>
+              <option key={item} value={item}>{sortLabel[item]}</option>
+            )
+          }
+        </select>
+      </div>
     </div>
   )
 }
