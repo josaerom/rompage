@@ -4,7 +4,6 @@ import { setSort, setCurrentPosts } from '../../store/portfolioListSlice.js';
 import { setCurrentPage } from '../../store/paginationSlice.js'
 
 const Sort = () => {
-
   let dispatch = useDispatch();
 
   const sortType = {
@@ -23,7 +22,6 @@ const Sort = () => {
   }
 
   let { sortOrder } = useSelector((state) => state.portfolioListStore);
-  console.log(sortOrder)
 
   return (
     <div className="sort-box">

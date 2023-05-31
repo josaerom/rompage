@@ -1,12 +1,15 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { forwardRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import { setTotalPosts, setCurrentPosts } from "../../store/portfolioListSlice.js";
+import Image from "../common/Image.jsx";
 
-const List = () => {
+const List = (props, forwardRef) => {
   let dispatch = useDispatch();
   let { totalPosts, currentPosts } = useSelector((state) => state.portfolioListStore);
+
 
   useEffect(() => {
     if (!!!totalPosts.length) {
@@ -23,9 +26,10 @@ const List = () => {
     }
   }, []);
 
+
   return (
     <>
-      <section className="portfolio-list">
+      <section className="portfolio-list" ref={forwardRef}>
         <h2>포트폴리오 목록</h2>
         <div className="pp-wrap">
           {!!currentPosts.length ?
@@ -34,7 +38,9 @@ const List = () => {
                 return (
                   <li key={RNUM}>
                     <Link to={`/portfolio/detail/${RNUM}`}>
-                      <div><img src={`/common/img/portfolio/${THUMBNAIL_IMG}`} alt={THUMBNAIL_MEMO} aria-hidden="true" /></div>
+                      <div>
+                        <Image src={`/common/img/portfolio/${THUMBNAIL_IMG}`} alt={THUMBNAIL_MEMO} ariaHidden />
+                      </div>
                       <h3>{THUMBNAIL_MEMO}</h3>
                     </Link>
 
@@ -49,4 +55,4 @@ const List = () => {
   )
 }
 
-export default List;
+export default forwardRef(List);

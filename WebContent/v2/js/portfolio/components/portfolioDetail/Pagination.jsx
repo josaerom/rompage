@@ -3,8 +3,6 @@ import useDetailContext from "../../store/portfolioDetailContext.jsx";
 
 const Pagination = () => {
   let { portfolioPrev, portfolioNext } = useDetailContext();
-  console.log(portfolioPrev);
-  console.log(portfolioNext);
   return (
     <>
       <div className="pagination-nav-wrap">
@@ -12,7 +10,7 @@ const Pagination = () => {
           {!!portfolioPrev.THUMBNAIL_MEMO &&
             <>
               <dt>다음 포트폴리오</dt>
-              <dd><Link to={`/portfolio/detail/${portfolioPrev.RNUM}`}>
+              <dd><Link onClick={()=>{window.scrollTo(0, 0)}} to={`/portfolio/detail/${portfolioPrev.RNUM}`}>
                 {portfolioPrev.THUMBNAIL_MEMO}
               </Link></dd>
             </>
@@ -21,7 +19,7 @@ const Pagination = () => {
             <>
               <dt>이전 포트폴리오</dt>
               <dd>
-                <Link to={`/portfolio/detail/${portfolioNext.RNUM}`}>
+                <Link onClick={()=>{window.scrollTo(0, 0)}} to={`/portfolio/detail/${portfolioNext.RNUM}`}>
                   {portfolioNext.THUMBNAIL_MEMO}
                 </Link>
               </dd>

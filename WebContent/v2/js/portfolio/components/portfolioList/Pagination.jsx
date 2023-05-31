@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentPage } from '../../store/paginationSlice.js';
 import { setCurrentPosts } from '../../store/portfolioListSlice.js';
 
-const Pagination = () => {
+const Pagination = ({goToList}) => {
   let dispatch = useDispatch();
   let { totalPosts, postsPrePage } = useSelector((state) => state.portfolioListStore);
   let { currentPage } = useSelector((state) => state.paginationStore)
@@ -13,6 +13,7 @@ const Pagination = () => {
   const hendelCurrentPage = (idx) => {
     dispatch(setCurrentPosts(idx));
     dispatch(setCurrentPage(idx));
+    goToList.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (

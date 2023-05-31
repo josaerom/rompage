@@ -10,7 +10,6 @@
 <title><sitemesh:write property="title"/> : ROMPAGE</title>
 <link rel="shortcut icon" href="/common/img/common/favicon.ico" type="image/x-icon" />
 <link href="/v2/css/common.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/v2/js/library/jquery.min.js"></script>
 <sitemesh:write property="head"/>
 </head>
 <body>
@@ -122,12 +121,11 @@
 	
 	<!-- footer -->	
 	<footer id="footer">		
-		<p class="copyright">Copyright © 2016 ROMPAGE All rights reserved.</p>
+		<p class="copyright">Copyright © 2023 ROMPAGE All rights reserved.</p>
 	</footer>	
 	<!-- //footer -->
 </div>	
 <!-- //wrap -->
-
 <script type="text/javascript" src="/v2/js/common/navigation.js"></script>
 	
 </body>

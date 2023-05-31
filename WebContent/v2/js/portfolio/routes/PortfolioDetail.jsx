@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Header from '../components/portfolioList/Header.jsx';
+import Header from '../components/common/Header.jsx';
 import Detail from "../components/portfolioDetail/Detail.jsx";
 
 

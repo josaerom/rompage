@@ -7,7 +7,6 @@ export default function ScrollToTop(){
   let {currentPage } = useSelector((state)=>state.paginationStore);
 
   useEffect(()=>{
-    console.log(pathname)
     window.scrollTo(0, 0);
   }, [pathname, currentPage])
 

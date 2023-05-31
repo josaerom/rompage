@@ -18,8 +18,7 @@ public class detailSelect implements Action{
 		ActionForward forward = new ActionForward();
 		
 		forward.setRedirect(false);
-		forward.setPath("/rompage/v2/portfolio/portfolioList.jsp");
-		
+		forward.setPath("/v2/site/portfolio.jsp");
 		request.setAttribute("rNum", request.getParameter("rNum"));
 		request.setAttribute("currentPage", request.getParameter("currentPage"));
 		

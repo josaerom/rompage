@@ -18,7 +18,6 @@ export const DetailProvider = ({ children }) => {
       }
     })
       .then((result) => {
-        console.log(result.data)
         setPortfolioInfo(result.data.info);
         setPortfolioDetail(result.data.detail);
         setPortfolioPrev(result.data.prev);

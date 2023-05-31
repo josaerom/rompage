@@ -1,15 +1,15 @@
-
-import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 import useDetailContext from "../../store/portfolioDetailContext.jsx";
 import Pagination from "../../components/portfolioDetail/Pagination.jsx";
+import Image from "../common/Image.jsx";
 
 const Detail = () => {
   let { portfolioInfo, portfolioDetail } = useDetailContext();
-  console.log(portfolioInfo);
-  console.log(portfolioDetail);
 
-  let navigation = useNavigate();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <section className="content-wrap">
@@ -64,7 +64,8 @@ const Detail = () => {
           {portfolioDetail.map(({ RNUM, IMG, MEMO }) => {
             return (
               <div className="section" key={RNUM}>
-                <img src={`/common/img/portfolio/${IMG}`} alt={IMG} />
+                {/* <img src={`/common/img/portfolio/${IMG}`} alt={IMG} /> */}
+                <Image src={`/common/img/portfolio/${IMG}`} alt={IMG} ariaHidden="false" />
                 <p dangerouslySetInnerHTML={{ __html: MEMO }}></p>
               </div>
             )

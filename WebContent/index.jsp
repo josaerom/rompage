@@ -54,7 +54,7 @@
 		    		<h2>포트폴리오</h2>
 		    		<p>react로 구현한 포트폴리오 페이지 입니다.</p>
 		    		<p>제가 작업한 프로젝트들을 한 눈에 볼 수 있어요.</p>
-		    			<a href="/resume" aria-label="포트폴리오 자세히 보기">LEARN MORE</a>
+		    			<a href="/portfolio" aria-label="포트폴리오 자세히 보기">LEARN MORE</a>
 		    	</div>
 	    	</div>
 	    </section>
@@ -74,6 +74,7 @@
 <div class="scroll-wrap">
 	<div class="top-btn"><button type="button" aria-label="제일 위로 이동">TOP</button></div>
 </div>
+<script type="text/javascript" src="/v2/js/library/jquery.min.js"></script>
 <script type="text/javascript" src="/v2/js/library/jquery.fullpage.js"></script>
 <script type="text/javascript" src="/v2/js/library/keenslider.js"></script>
 <script type="text/javascript" src="/v2/js/common/main.js"></script>

@@ -10,7 +10,6 @@ const App = () => {
   return (
     <>
       <Provider store={store}>
-        <ScrollToTop />
         <Routes>
           <Route path="/portfolio" element={
             <PortfolioList />

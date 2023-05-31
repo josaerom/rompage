@@ -16,8 +16,7 @@ public class portfolioSelect implements Action{
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {	
 		System.out.println("[portfolioSelectV2] portfolio");
 		ActionForward forward = new ActionForward();
-		String path = "/rompage/v2/portfolio/portfolioList.jsp";
-		
+		String path = "/v2/site/portfolio.jsp";
 		forward.setRedirect(false);
 		forward.setPath(path);
 		
