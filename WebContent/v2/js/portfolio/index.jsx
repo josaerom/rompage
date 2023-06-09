@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals.jsx';
 import App from './App.jsx';
 
-const root = ReactDOM.createRoot(document.getElementById('portfolio'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <BrowserRouter>

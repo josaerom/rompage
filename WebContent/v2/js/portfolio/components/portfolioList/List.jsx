@@ -1,15 +1,12 @@
 import axios from "axios";
-import { forwardRef } from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, forwardRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
 import { setTotalPosts, setCurrentPosts } from "../../store/portfolioListSlice.js";
-import Image from "../common/Image.jsx";
+import Item from "./Item.jsx";
 
 const List = (props, forwardRef) => {
   let dispatch = useDispatch();
-  let { totalPosts, currentPosts } = useSelector((state) => state.portfolioListStore);
-
+  let { totalPosts } = useSelector((state) => state.portfolioListStore);
 
   useEffect(() => {
     if (!!!totalPosts.length) {
@@ -26,29 +23,12 @@ const List = (props, forwardRef) => {
     }
   }, []);
 
-
   return (
     <>
       <section className="portfolio-list" ref={forwardRef}>
         <h2>포트폴리오 목록</h2>
         <div className="pp-wrap">
-          {!!currentPosts.length ?
-            <ul>
-              {currentPosts.map(({ RNUM, THUMBNAIL_IMG, THUMBNAIL_MEMO }) => {
-                return (
-                  <li key={RNUM}>
-                    <Link to={`/portfolio/detail/${RNUM}`}>
-                      <div>
-                        <Image src={`/common/img/portfolio/${THUMBNAIL_IMG}`} alt={THUMBNAIL_MEMO} ariaHidden />
-                      </div>
-                      <h3>{THUMBNAIL_MEMO}</h3>
-                    </Link>
-
-                  </li>
-                )
-              })}
-            </ul>
-            : 'no'}
+          <Item />
         </div>
       </section >
     </>
