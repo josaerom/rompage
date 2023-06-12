@@ -173,7 +173,7 @@
 .pagination {
 	text-align: center;
 	margin: 20px 0;
-	
+
 	button {
 		display: inline-block;
 		vertical-align: top;
@@ -188,14 +188,15 @@
 		transition: 0.2s;
 		margin: 0 3px;
 		border: 1px solid #aaaaaa;
-		
-		&[disabled]{
+
+		&[disabled] {
 			border-color: #ddd;
 		}
 	}
 
 	.more {
 		width: 100%;
+		color: #555;
 	}
 
 	.first {
@@ -267,15 +268,17 @@
 	.thumbnail-wrap {
 		text-align: center;
 		padding: 70px 0;
-		img{
-			width: 100%;
+
+		img {
+			max-width: 100%;
 		}
 	}
 
 
 	p {
 		text-align: center;
-		padding: 20px 0;
+		padding: 20px;
+		word-wrap: break-word;
 	}
 
 	.section {
@@ -285,10 +288,10 @@
 
 	.info-wrap {
 		width: 80%;
-    margin: 0 auto;
-    border: 1px solid #bdc8ca;
+		margin: 0 auto;
+		border: 1px solid #bdc8ca;
 
-		
+
 	}
 
 	dl {
@@ -408,6 +411,26 @@
 }
 
 @include screen(custom, max, $max-sm) {
+
+	.top-banner .top-banner-bg,
+	#portfolio-detail .top-banner .top-banner-bg {
+		height: 300px;
+	}
+
+	#portfolio-detail .content-title {
+		font-size: 26px;
+	}
+
+	#portfolio-detail h3.pf-title {
+		font-size: 16px;
+	}
+
+	#portfolio-detail a.list-button {
+		width: 130px;
+		height: 35px;
+		font-size: 15px;
+	}
+
 	.pp-wrap {
 		ul {
 			li {

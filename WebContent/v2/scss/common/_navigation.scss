@@ -173,6 +173,7 @@ header{
 			    transition: 0.2s ease-in-out all 0.1s;
 			    &:last-child{
 			    	background: transparent;
+						width: 0;
 			    }
 			    &.on:nth-child(1) {transform: translateY(6px) rotate(-45deg);transition:0.2s ease-in-out all;}
 				&.on:nth-child(2) {display:none; transform: translateX(50px);}

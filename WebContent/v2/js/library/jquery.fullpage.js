@@ -1648,9 +1648,9 @@
                     }
                 });
 
-                if(element.is('source')){
+                if(element.is('source') && !element.closest('picture')){
                     var typeToPlay = element.closest('video').length ? 'video' : 'audio';
-                    element.closest(typeToPlay).get(0).load();
+	                element.closest(typeToPlay).get(0).load();
                 }
             });
         }

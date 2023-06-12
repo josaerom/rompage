@@ -9,6 +9,7 @@ $(function(){
 				    navigationTooltips: ['롬페이지 소개 영역', '이력서 영역', '포트폴리오 영역', '관리자 영역'],
 				    responsiveHeight: 350,
 				    lockAnchors: true,
+				    scrollingSpeed: 300,
 				    afterLoad : function(anchorLink, index){
 				    	//index == 1 ? $('.scroll_wrap').stop().slideUp(600) : $('.scroll_wrap').stop().slideDown(600);
 				    	index == 1 ? $('.scroll-wrap').removeClass('active') : $('.scroll-wrap').addClass('active');
