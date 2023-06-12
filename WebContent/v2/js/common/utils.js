@@ -8,7 +8,6 @@ export function lazyload(imgEl) {
 
   if (!observer) {
     observer = new IntersectionObserver(onIntersection);
-    console.log("observer effect----------")
   }
   imgEl && observer.observe(imgEl);
 }
@@ -18,7 +17,6 @@ export const LOAD_IMG_EVENT_TYPE = "loadImage";
 export function onIntersection(entries, io) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry)
       io.unobserve(entry.target);
       entry.target.dispatchEvent(new CustomEvent(LOAD_IMG_EVENT_TYPE));
     }
@@ -26,6 +24,5 @@ export function onIntersection(entries, io) {
 }
 
 document.querySelectorAll('img.lazyload').forEach((entry)=>{
-  console.log(entry);
   lazyload(entry);
 })

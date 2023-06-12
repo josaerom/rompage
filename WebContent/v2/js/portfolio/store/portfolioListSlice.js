@@ -19,6 +19,11 @@ const portfolioListStore = createSlice({
 
       state.currentPosts = state.totalPosts.slice(indexOfFirst, indexOfLast);
     },
+    setMorePosts(state, action) {
+      let currentPage = action.payload;
+      const indexOfLast = currentPage * state.postsPrePage;
+      state.currentPosts = state.totalPosts.slice(0, indexOfLast);
+    },
     setSort(state, action) {
       state.totalPosts = state.totalPosts.reverse();
       state.sortOrder = action.payload;
@@ -26,6 +31,6 @@ const portfolioListStore = createSlice({
   }
 })
 
-export let { setTotalPosts, setCurrentPosts, setSort } = portfolioListStore.actions;
+export let { setTotalPosts, setCurrentPosts, setSort, setMorePosts } = portfolioListStore.actions;
 
 export default portfolioListStore;

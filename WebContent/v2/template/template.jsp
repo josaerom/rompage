@@ -121,7 +121,7 @@
 	
 	<!-- footer -->	
 	<footer id="footer">		
-		<p class="copyright">Copyright © 2023 ROMPAGE All rights reserved.</p>
+		<p class="copyright">Copyright © 2016 ROMPAGE All rights reserved.</p>
 	</footer>	
 	<!-- //footer -->
 </div>	

@@ -5,7 +5,6 @@ let imageStore = createSlice({
   initialState : { isLoad : false } ,
   reducers : {
     setIsLoad : function (state, action){
-      console.log('siload!@!!!!');
       state.isLoad = true;
     }
   }
