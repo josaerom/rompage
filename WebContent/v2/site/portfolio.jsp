@@ -17,6 +17,5 @@
 <script src="/v2/js/library/react-dom.development.js" type="text/javascript"></script>
 
 <script src="/v2/js/portfolio/dist/portfolioList.js" type="text/javascript"></script>
-<script src="/v2/js/library/jquery.min.js" type="text/javascript"></script>
 </body>
 </html>

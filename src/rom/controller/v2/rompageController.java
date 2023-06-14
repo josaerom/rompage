@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
 import rom.action.Action;
 import rom.action.ActionForward;
 import rom.db.portfolio.beanPortfolio;
-import rom.db.portfolio.bld.v2.detailSelect;
 import rom.db.portfolio.bld.v2.getPortfolioDetail;
 import rom.db.portfolio.bld.v2.getPortfolioList;
 import rom.db.portfolio.bld.v2.portfolioSelect;
-
-import com.google.gson.Gson;
+import rom.db.portfolio.bld.v2.resumeSelect;
 
 
 public class rompageController extends HttpServlet implements Servlet{
@@ -34,7 +34,7 @@ public class rompageController extends HttpServlet implements Servlet{
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		if(command.equals(portfolio)){ //포트폴리오 페이지 로드
+		if(command.equals(portfolio) || command.equals("/career") || command.contains(portfolio+"/detail")){ //포트폴리오 페이지 로드
 			System.out.println("[rompageControllerV2] portfolio");
 			action = new portfolioSelect();
 			try {
@@ -57,17 +57,16 @@ public class rompageController extends HttpServlet implements Servlet{
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}			
-		}else if(command.contains(portfolio+"/detail")){ //포트폴리오 페이지 로드
-			System.out.println("[rompageControllerV2] detail");
-			System.out.println("[rompageControllerV2] detail rNum >> " + request.getParameter("rNum"));
-			System.out.println("[rompageControllerV2] detail currentPage >> " + request.getHeader("currentPage"));
-			action = new detailSelect();
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}else if(command.equals(portfolio+"/getPortfolioDetail.ajax")){ //포트폴리오 페이지 로드
+		} /*
+			 * else if(command.contains(portfolio+"/detail")){ //포트폴리오 페이지 로드
+			 * System.out.println("[rompageControllerV2] detail");
+			 * System.out.println("[rompageControllerV2] detail rNum >> " +
+			 * request.getParameter("rNum"));
+			 * System.out.println("[rompageControllerV2] detail currentPage >> " +
+			 * request.getHeader("currentPage")); action = new detailSelect(); try { forward
+			 * = action.execute(request, response); } catch (Exception e) {
+			 * e.printStackTrace(); } }
+			 */else if(command.equals(portfolio+"/getPortfolioDetail.ajax")){ //포트폴리오 페이지 로드
 			System.out.println("[rompageControllerV2] getPortfolioDetail.ajax");
 			try {
 				Map<String, Object> list = new getPortfolioDetail().getPortfolioList(request, response);
@@ -79,6 +78,14 @@ public class rompageController extends HttpServlet implements Servlet{
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}			
+		}else if(command.equals("/resume")){ //이력서 페이지 로드
+			System.out.println("[rompageControllerV2] portfolio");
+			action = new resumeSelect();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		if(forward!=null){

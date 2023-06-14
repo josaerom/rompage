@@ -19,7 +19,7 @@ const PortfolioList = () => {
 
   return (
     <>
-      <Header title="포트폴리오" didMount={didMount} />
+      <Header title="PORTFOLIO" ariaTitle="포트폴리오" didMount={didMount} />
       <div className="content-wrap">
         <Sort />
         <List ref={ref} />

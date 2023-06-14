@@ -18,7 +18,7 @@ const PortfolioDetail = () => {
   return (
     <>
       <div id="portfolio-detail">
-        <Header title="포트폴리오" didMount={didMount} />
+        <Header title="DETAIL" ariaTitle="포트폴리오" didMount={didMount} />
         <DetailProvider>
           <Detail />
         </DetailProvider>

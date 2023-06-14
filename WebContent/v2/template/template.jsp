@@ -37,7 +37,7 @@
 					<div class="nav-2depth">
 						<ul>
 							<li><a href="/portfolio">포트폴리오</a></li>
-							<li><a href="/portfolio/portfolio">경력</a></li>
+							<li><a href="/career">경력기술서</a></li>
 						</ul>
 					</div>
 				</li>
@@ -78,7 +78,7 @@
 							<button type="button" class="nav-2depth-btn" id="mNav1depth01" aria-expanded="false" aria-controls="mNav2depth01"><h2>RESUME</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth01" role="region" aria-labelledby="mNav1depth01">
 								<ul>
-									<li><a href="/resume/resume">이력서</a></li>
+									<li><a href="/resume">이력서</a></li>
 									<li><a href="/resume/selfIntroduction">자기소개서</a></li>
 								</ul>
 							</div>				
@@ -89,7 +89,7 @@
 							<div class="nav-2depth-on" id="mNav2depth02" role="region" aria-labelledby="mNav1depth02">
 								<ul>
 									<li><a href="/portfolio">포트폴리오</a></li>
-									<li><a href="/portfolio/portfolio">경력기술</a></li>
+									<li><a href="/career">경력기술서</a></li>
 								</ul>
 							</div>
 						</li>
@@ -126,6 +126,7 @@
 	<!-- //footer -->
 </div>	
 <!-- //wrap -->
+<script type="text/javascript" src="/v2/js/library/jquery.min.js"></script>
 <script type="text/javascript" src="/v2/js/common/navigation.js"></script>
 	
 </body>
