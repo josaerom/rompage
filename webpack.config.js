@@ -5,10 +5,10 @@ module.exports = {
   mode: "development",
   entry: {
 	  portfolioList: "./WebContent/v2/js/portfolio/index.jsx",
-	  //portfolioDetail : "./WebContent/v2/js/portfolio/portfolioDetail.jsx",
+	  navigation : "./WebContent/v2/js/common/navigation.js",
   },
   output:{
-	  path : path.resolve(__dirname, 'WebContent/v2/js/portfolio/dist'),
+	  path : path.resolve(__dirname, 'WebContent/v2/js/dist'),
 	  filename: '[name].js'
   },
   devtool: "inline-source-map",

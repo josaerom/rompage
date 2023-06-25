@@ -47,6 +47,9 @@ li.quick-item {
 	width: 100%;
 	text-align: center;
 }
+li.quick-item:last-child {
+	width: 50%;
+}
 
 .quick-collapse-btn {
 	display: none;

@@ -50,6 +50,7 @@
               <button data-link="section07" role="tab" aria-controls="tabpanel07">학력</button>
             </li>
           </ul>
+          <button type="button" class="all-collapse">모두닫기</button>
         </div>
         <section class="content">
           <div class="sction-wrap">

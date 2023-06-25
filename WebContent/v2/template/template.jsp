@@ -22,33 +22,33 @@
 	<header>
 		<h1 class="logo"><a href="/"><img src="/v2/image/common/rompage_logo.png" alt="ROMPAGE로고" ><span class="sr-only">롬페이지</span></a></h1>		
 		<nav class="gnb">			
-			<ul class="nav">
-				<li>
-					<a href="/resume/resume"><h2>RESUME</h2></a>
-					<div class="nav-2depth">
-						<ul>
-							<li><a href="/resume">이력서</a></li>
-							<li><a href="/resume/selfIntroduction">자기소개서</a></li>
+			<ul class="nav pc">
+				<li class="nav-list">
+					<a href="/resume/resume" class="title"><h2>RESUME</h2></a>
+					<div class="nav-2depth-wrap">
+						<ul class="nav-2depth">
+							<li class="nav-2depth-list"><a href="/resume" class="nav-first">이력서</a></li>
+							<li class="nav-2depth-list"><a href="/resume/selfIntroduction" class="nav-last">자기소개서</a></li>
 						</ul>
 					</div>				
 				</li>
-				<li>
-					<a href="/portfolio"><h2>PORTFOLIO</h2></a>
-					<div class="nav-2depth">
-						<ul>
-							<li><a href="/portfolio">포트폴리오</a></li>
-							<li><a href="/career">경력기술서</a></li>
+				<li class="nav-list">
+					<a href="/portfolio" class="title"><h2>PORTFOLIO</h2></a>
+					<div class="nav-2depth-wrap">
+						<ul class="nav-2depth">
+							<li class="nav-2depth-list"><a href="/portfolio" class="nav-first">포트폴리오</a></li>
+							<li class="nav-2depth-list"><a href="/career" class="nav-last">경력기술서</a></li>
 						</ul>
 					</div>
 				</li>
-				<li>
-					<a href="/admin/resumeUpdate"><h2>ADMIN</h2></a>
-					<div class="nav-2depth">
-						<ul>
-							<li><a href="/admin/resumeUpdate">이력서 관리</a></li>
-							<li><a href="/admin/selfIntroUpdate">자기소개서 관리</a></li>
-							<li><a href="/admin/portfolioSelect">포트폴리오 관리</a></li>
-							<li><a href="/rompage/prototype/main.jsp" class="nav_last show_pc_hide_mobile">프로토타입</a></li>
+				<li class="nav-list">
+					<a href="/admin/resumeUpdate" class="title"><h2>ADMIN</h2></a>
+					<div class="nav-2depth-wrap">
+						<ul class="nav-2depth">
+							<li class="nav-2depth-list"><a href="/admin/resumeUpdate" class="nav-first">이력서 관리</a></li>
+							<li class="nav-2depth-list"><a href="/admin/selfIntroUpdate">자기소개서 관리</a></li>
+							<li class="nav-2depth-list"><a href="/admin/portfolioSelect">포트폴리오 관리</a></li>
+							<li class="nav-2depth-list"><a href="/rompage/prototype/main.jsp" class="nav-last" class="nav-last">프로토타입</a></li>
 						</ul>
 					</div>
 				</li>
@@ -74,7 +74,7 @@
 				<nav class="gnb">
 					<ul class="nav">
 						<li>
-							<h2>RESUME</h2>
+							<!-- <h2>RESUME</h2> -->
 							<button type="button" class="nav-2depth-btn" id="mNav1depth01" aria-expanded="false" aria-controls="mNav2depth01"><h2>RESUME</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth01" role="region" aria-labelledby="mNav1depth01">
 								<ul>
@@ -84,7 +84,7 @@
 							</div>				
 						</li>
 						<li>
-							<h2>PORTFOLIO</h2>
+							<!-- <h2>PORTFOLIO</h2> -->
 							<button type="button" class="nav-2depth-btn" id="mNav1depth02" aria-expanded="false" aria-controls="mNav2depth02"><h2>PORTFOLIO</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth02" role="region" aria-labelledby="mNav1depth02">
 								<ul>
@@ -94,14 +94,14 @@
 							</div>
 						</li>
 						<li>
-							<h2>ADMIN</h2>
+							<!-- <h2>ADMIN</h2> -->
 							<button type="button" class="nav-2depth-btn" id="mNav1depth03" aria-expanded="false" aria-controls="mNav2depth03"><h2>ADMIN</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth03" role="region" aria-labelledby="mNav1depth03">
 								<ul>
 									<li><a href="/admin/resumeUpdate">이력서 관리</a></li>
 									<li><a href="/admin/selfIntroUpdate">자기소개서 관리</a></li>
 									<li><a href="/admin/portfolioSelect">포트폴리오 관리</a></li>
-									<li><a href="/rompage/prototype/main.jsp" class="nav_last show_pc_hide_mobile">프로토타입</a></li>
+									<li><a href="/rompage/prototype/main.jsp" class="nav-last">프로토타입</a></li>
 								</ul>
 							</div>
 						</li>
@@ -126,7 +126,6 @@
 	<!-- //footer -->
 </div>	
 <!-- //wrap -->
-<script type="text/javascript" src="/v2/js/library/jquery.min.js"></script>
 <script type="text/javascript" src="/v2/js/common/navigation.js"></script>
 	
 </body>

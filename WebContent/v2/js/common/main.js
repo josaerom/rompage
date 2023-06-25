@@ -11,8 +11,8 @@ $(function(){
 				    lockAnchors: true,
 				    scrollingSpeed: 300,
 				    afterLoad : function(anchorLink, index){
-				    	//index == 1 ? $('.scroll_wrap').stop().slideUp(600) : $('.scroll_wrap').stop().slideDown(600);
 				    	index == 1 ? $('.scroll-wrap').removeClass('active') : $('.scroll-wrap').addClass('active');
+				    	menuFocusout();
 				    }
 				});
 				setTimeout(function(){

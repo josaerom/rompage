@@ -1,74 +1,50 @@
-$(document).ready(function(){
-	var navigation = {
-			$el : $('header'),
-			$nav : $('.nav li'),
-			$version : $('.version'),
-			$mobileBtn : $('.nav-2depth-btn'),
-			$hamburger : $('.menu-hamburger'),
-			init : function(){
-				this.addEvent();
-			},
-			addEvent : function(){
-				var _this = navigation;
-				
-				_this.$nav.on('mouseover focusin focus keydown', function(e){
-					$(this).children('.nav-2depth').addClass('active');
-					if(e.shiftKey) $(this).children('.nav-2depth').removeClass('active');
-				}).on('mouseleave', function(){
-					$(this).children('.nav-2depth').removeClass('active');
-				});
-				
-				_this.$nav.find('.nav-2depth a:last').on('focusout', function(){
-					$(this).parents('.nav-2depth').removeClass('active');
-				})
-				
-				_this.$version.find('button').on('click', function(){
-					$(this).parent().toggleClass('active');
-					_this.ariaExpanded($(this));
-				});
-				_this.$version.find('button').on('keydown', function(e) {
-				     var code = e.keyCode || e.which;
-				     if (e.shiftKey && code === 9) {
-				    	 _this.$version.removeClass('active');
-				    	 _this.ariaExpanded($(this), false);
-				     }
-				});
-				
-				_this.$hamburger.off('click').on('click', function(){
-					$(this).children().toggleClass('on');
-					$('header').toggleClass('on').hasClass('on') ? $(".header-on").stop().slideDown(600) : $(".header-on").stop().slideUp(600);
-					_this.ariaExpanded($(this));
-					$(this).focus();
-				});
-				
-				_this.$mobileBtn.on('click', function(){				    
-				    $(this).siblings('.nav-2depth-on').toggleClass('on').hasClass('on') ? $(this).siblings('.nav-2depth-on').stop().slideDown(600) : $(this).siblings('.nav-2depth-on').stop().slideUp(600);
-				    _this.ariaExpanded($(this));
-				})
-				
-				$('.header-on .nav > li:last-child a:last').on('keydown', function(e) {
-				     var code = e.keyCode || e.which;
-				     if (!e.shiftKey && code === 9) {
-				    	 $('.menu-hamburger').click();
-				     }
-				});
-				_this.$version.find('ul li:last a').on('keydown', function(e) {
-				     var code = e.keyCode || e.which;
-				     if (!e.shiftKey && code === 9) {
-				    	 _this.$version.removeClass('active');
-				    	 _this.ariaExpanded($('.version button'));
-				     }
-				});
-				
-			}, 
-			ariaExpanded : function(target, only){
-				if(typeof only != 'undefined'){
-					target.attr('aria-expanded', only)
-				}else{
-					target.attr('aria-expanded') == 'true' ? target.attr('aria-expanded', false) : target.attr('aria-expanded', true);
-				}
-			}
+const eventMenuFocus = ({ type, currentTarget, shiftKey }) => {
+	if (shiftKey || type == 'mouseleave') {
+		document.querySelector('header').classList.remove('on');
+		currentTarget.classList.remove('on');
+	} else {
+		document.querySelector('header').classList.add('on');
+		currentTarget.classList.add('on');
 	}
-	navigation.init();
-	
+}
+/* PC */
+document.querySelectorAll('.gnb .nav.pc > .nav-list').forEach((element) => {
+	element.addEventListener('mouseover', eventMenuFocus, false);
+	element.addEventListener('focusin', eventMenuFocus, false);
+	element.addEventListener('focus', eventMenuFocus, false);
+	element.addEventListener('keydown', eventMenuFocus, false);
+	element.addEventListener('mouseleave', eventMenuFocus, false);
 });
+
+/*  PC focusout */
+document.querySelectorAll('.gnb .nav.pc > .nav-list .nav-2depth-list .nav-last').forEach((element) => {
+	element.addEventListener('focusout',({currentTarget})=>{
+		document.querySelector('header').classList.remove('on');
+		currentTarget.closest('.nav-list').classList.remove('on');
+	});
+});
+
+/* MOBILE/TABLET */	
+document.getElementById('hamburger').addEventListener('click', ({ currentTarget }) => {
+	currentTarget.classList.toggle('on');
+	document.querySelector('header').classList.toggle('on');
+	document.getElementById('allMenu').classList.toggle('on');
+})
+
+document.querySelectorAll('.nav-2depth-btn').forEach((entry, idx) => {
+	entry.addEventListener('click', function ({ currentTarget }) {
+		currentTarget.classList.toggle('on');
+		currentTarget.parentElement.querySelector('.nav-2depth-on').classList.toggle('on');
+		if (document.querySelectorAll('.nav-2depth-btn').length - 1 == idx) {
+			currentTarget.classList.toggle('nav-last');
+		}
+	})
+})
+
+function menuFocusout() {
+	document.querySelector('header').classList.remove('on');
+	document.querySelector('.header-on').classList.remove('on');
+	document.getElementById('hamburger').classList.remove('on');
+}
+document.getElementById('content').addEventListener('focusin', menuFocusout);
+document.getElementById('content').addEventListener('click', menuFocusout);
