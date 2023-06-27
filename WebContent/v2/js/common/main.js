@@ -15,9 +15,9 @@ $(function(){
 				    	menuFocusout();
 				    }
 				});
-				setTimeout(function(){
-					main.$el.addClass('init');
-				}, 100)
+				// setTimeout(function(){
+				// 	main.$el.addClass('init');
+				// }, 100)
 				
 				this.runSlick();
 				this.addEvent();
@@ -67,5 +67,10 @@ $(function(){
 	}
 	main.init();
 	
+	function menuFocusout() {
+		document.querySelector('header').classList.remove('on');
+		document.querySelector('.header-on').classList.remove('on');
+		document.getElementById('hamburger').classList.remove('on');
+	}
 	
 });

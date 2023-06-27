@@ -14,9 +14,8 @@ export function lazyload(imgEl) {
 
 export function pictureLazyload(imgEl) {
   function loadImage() {
-    let lazyImage = entry.target;
-	lazyImage.srcset = lazyImage.dataset.srcset;
-    lazyImage.nextElementSibling.srcset = lazyImage.dataset.srcset;
+	imgEl.srcset = imgEl.dataset.srcset;
+    imgEl.nextElementSibling.srcset = imgEl.dataset.srcset;
 
   }
   imgEl && imgEl.addEventListener(LOAD_IMG_EVENT_TYPE, loadImage);
@@ -39,8 +38,34 @@ export function onIntersection(entries, io) {
 }
 
 document.querySelectorAll('img.lazyload').forEach((entry)=>{
-  pictureLazyload(entry);
+  lazyload(entry);
 })
 /*document.querySelectorAll('picture.lazyload').forEach((entry)=>{
   pictureLazyload(entry);
 })*/
+
+
+export function ariaExpanded(target) {
+	let expandVal = target.getAttribute('aria-expanded');
+	if(expandVal == 'true'){
+		target.setAttribute('aria-expanded', false);
+	}else{
+		target.setAttribute('aria-expanded', true);		
+	}
+}
+
+export function scrollEvt(){
+	const handleScroll = () => {
+	    var scrollY = window.scrollY;
+	    if (scrollY > 500) {
+	      document.querySelector('.scroll-wrap').classList.add('active')
+	    } else {
+	      document.querySelector('.scroll-wrap').classList.remove('active')
+	    }
+	  }
+	  
+	document.querySelector('.scroll-wrap .top-btn button').addEventListener('click', () => {
+		window.scrollTo({top:0, behavior : 'smooth'})
+	})
+	window.addEventListener('scroll', handleScroll);
+}

@@ -20,6 +20,9 @@ const List = (props, forwardRef) => {
           dispatch(setTotalPosts(data.data));
           dispatch(setCurrentPosts(1));
         })
+        .catch(function (error) {
+          console.log(error.toJSON());
+        });
     }
   }, []);
 

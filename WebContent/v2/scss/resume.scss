@@ -2,15 +2,18 @@
 
 .content {
 	padding: 50px;
+	max-width: 1440px;
+	margin: 0 auto;
+	.title {
+		margin-top: 100px;
+		font-size: 30px;
+		font-weight: bold;
+		line-height: 2.5em;
+		text-align: center;
+	}
 }
 
-.title {
-	margin-top: 100px;
-	font-size: 30px;
-	font-weight: bold;
-	line-height: 2.5em;
-	text-align: center;
-}
+
 
 
 .quick-wrap {
@@ -47,6 +50,7 @@ li.quick-item {
 	width: 100%;
 	text-align: center;
 }
+
 li.quick-item:last-child {
 	width: 50%;
 }

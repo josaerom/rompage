@@ -118,15 +118,19 @@
 		<sitemesh:write property="body"/>		
 	</main>
 	<!-- //container -->
+
+	<div class="scroll-wrap">
+		<div class="top-btn"><button type="button" aria-label="제일 위로 이동">TOP</button></div>
+	</div>
 	
 	<!-- footer -->	
 	<footer id="footer">		
-		<p class="copyright">Copyright © 2016 ROMPAGE All rights reserved.</p>
+		<p class="copyright"><img data-src="/common/img/common/logo_footer.png" class="lazyload ico-copyright">Copyright © 2016 ROMPAGE All rights reserved.</p>
 	</footer>	
 	<!-- //footer -->
 </div>	
 <!-- //wrap -->
-<script type="text/javascript" src="/v2/js/common/navigation.js"></script>
-	
+<script type="module" src="/v2/js/common/utils.js"></script>	
+<script type="text/javascript" src="/v2/js/dist/navigation.js"></script>
 </body>
 </html>

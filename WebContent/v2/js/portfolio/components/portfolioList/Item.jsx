@@ -21,7 +21,11 @@ const Item = () => {
             )
           })}
         </ul>
-        : 'no'}
+        : <ul>
+          <li><div className="blank_area"></div></li>
+          <li><div className="blank_area"></div></li>
+          <li><div className="blank_area"></div></li>
+        </ul>}
     </>
   )
 }

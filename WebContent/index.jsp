@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
 <title>메인</title>
-<link rel="preload" href="/v2/image/main/main_01.jpg" as="image" fetchpriority="high" />
+<!-- <link rel="preload" href="/v2/image/main/main_01.jpg" as="image" fetchpriority="high" /> -->
 <link href="/v2/css/jquery.fullpage.css" rel="stylesheet" type="text/css" />
 <link href="/v2/css/main.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -68,7 +68,7 @@
 	    		<picture>
 	    			<source media="(min-width:768px)" data-srcset="/v2/image/main/main_03.jpg">			
 	    			<source media="(max-width:767px)" data-srcset="/v2/image/main/m_main_03.jpg">
-			    	<img alt="롬페이지 메인 포트폴리오 배경" data-src="/v2/image/main/main_03.jpg" class="lazyload" aria-hidden="true">
+			    	<img alt="롬페이지 메인 포트폴리오 배경" data-src="/v2/image/main/main_03.jpg" aria-hidden="true">
 	    		</picture>
 	    	</div>
 	    	<div class="text-wrap">
@@ -96,9 +96,7 @@
 	</div>
 </div>
 
-<div class="scroll-wrap">
-	<div class="top-btn"><button type="button" aria-label="제일 위로 이동">TOP</button></div>
-</div>
+
 <script type="text/javascript" src="/v2/js/library/jquery.min.js"></script>
 <script type="text/javascript" src="/v2/js/library/jquery.fullpage.js"></script>
 <script type="text/javascript" src="/v2/js/library/keenslider.js"></script>

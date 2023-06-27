@@ -1,3 +1,6 @@
+import {ariaExpanded, scrollEvt} from './utils.js'
+
+
 const eventMenuFocus = ({ type, currentTarget, shiftKey }) => {
 	if (shiftKey || type == 'mouseleave') {
 		document.querySelector('header').classList.remove('on');
@@ -29,6 +32,7 @@ document.getElementById('hamburger').addEventListener('click', ({ currentTarget 
 	currentTarget.classList.toggle('on');
 	document.querySelector('header').classList.toggle('on');
 	document.getElementById('allMenu').classList.toggle('on');
+	ariaExpanded(currentTarget);
 })
 
 document.querySelectorAll('.nav-2depth-btn').forEach((entry, idx) => {
@@ -38,6 +42,7 @@ document.querySelectorAll('.nav-2depth-btn').forEach((entry, idx) => {
 		if (document.querySelectorAll('.nav-2depth-btn').length - 1 == idx) {
 			currentTarget.classList.toggle('nav-last');
 		}
+		ariaExpanded(currentTarget);
 	})
 })
 
@@ -46,5 +51,9 @@ function menuFocusout() {
 	document.querySelector('.header-on').classList.remove('on');
 	document.getElementById('hamburger').classList.remove('on');
 }
+
 document.getElementById('content').addEventListener('focusin', menuFocusout);
 document.getElementById('content').addEventListener('click', menuFocusout);
+
+scrollEvt();
+
