@@ -63,9 +63,9 @@ window.addEventListener('scroll', () => {
 document.querySelector('.all-collapse').addEventListener('click', function({target}){
     target.classList.toggle('collapse');
     document.querySelectorAll('.section').forEach((section)=>{    
-    if(target.classList.contains('collapse')) section.classList.add('collapse')
+    	if(target.classList.contains('collapse')) section.classList.add('collapse')
         else if(!target.classList.contains('collapse')) section.classList.remove('collapse')
-})
+	})
 })
 
 const observer = new ResizeObserver(entries => {
@@ -78,3 +78,8 @@ const observer = new ResizeObserver(entries => {
 })
 
 observer.observe(dq_quickList, { box: 'content-box' });
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelector('.top-banner').classList.add('active');
+	document.querySelector('.title-motion').classList.add('active');
+})

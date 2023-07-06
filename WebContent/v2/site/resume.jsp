@@ -14,10 +14,10 @@
 
       <body>
         <!-- content -->
-        <section class="top-banner active">
+        <section class="top-banner">
           <div class="top-banner-bg">
             <div class="inner-wrap">
-              <div class="title-motion active" aria-hidden="true">
+              <div class="title-motion" aria-hidden="true">
                 <span>R</span><span>E</span><span>S</span><span>U</span><span>M</span><span>E</span>
               </div>
               <h1 class="sr-only">이력서</h1>
