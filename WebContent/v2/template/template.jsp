@@ -24,7 +24,7 @@
 		<nav class="gnb">			
 			<ul class="nav pc">
 				<li class="nav-list">
-					<a href="/resume/resume" class="title"><h2>RESUME</h2></a>
+					<a href="/resume" class="title"><h2>이력서</h2></a>
 					<div class="nav-2depth-wrap">
 						<ul class="nav-2depth">
 							<li class="nav-2depth-list"><a href="/resume" class="nav-first">이력서</a></li>
@@ -33,7 +33,7 @@
 					</div>				
 				</li>
 				<li class="nav-list">
-					<a href="/portfolio" class="title"><h2>PORTFOLIO</h2></a>
+					<a href="/portfolio" class="title"><h2>포트폴리오</h2></a>
 					<div class="nav-2depth-wrap">
 						<ul class="nav-2depth">
 							<li class="nav-2depth-list"><a href="/portfolio" class="nav-first">포트폴리오</a></li>
@@ -42,7 +42,7 @@
 					</div>
 				</li>
 				<li class="nav-list">
-					<a href="/admin/resumeUpdate" class="title"><h2>ADMIN</h2></a>
+					<a href="/admin" class="title"><h2>관리자</h2></a>
 					<div class="nav-2depth-wrap">
 						<ul class="nav-2depth">
 							<li class="nav-2depth-list"><a href="/admin/resumeUpdate" class="nav-first">이력서 관리</a></li>
@@ -54,13 +54,13 @@
 				</li>
 			</ul>
 			<div class="right-menu">
-				<div class="version">
+				<!-- <div class="version">
 					<button type="button" aria-expanded="false">VERSION</button>
 					<ul>
 						<li><a href="/index_v1.jsp">V1.0</a></li>
 						<li><a href="/">V2.0</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<button type="button" class="menu-hamburger" id="hamburger" aria-expanded="false" aria-controls="allMenu">
 					<span></span>
 					<span></span>
