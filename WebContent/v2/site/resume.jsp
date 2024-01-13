@@ -77,7 +77,7 @@
               </div>
               <button>레이아웃</button>
             </div>
-            <div class="sction-box CARD001">
+            <div class="section-box CARD001">
               <ul role="list">
                 <c:forEach var="item" items="${work }">                  
                   <li>
