@@ -16,14 +16,10 @@
         <!-- content -->
         <section class="top-banner">
           <div class="top-banner-bg">
-            <div class="inner-wrap">
-              <div class="title-motion" aria-hidden="true">
-                <span>R</span><span>E</span><span>S</span><span>U</span><span>M</span><span>E</span>
-              </div>
-              <h1 class="sr-only">이력서</h1>
-            </div>
+            <custom-title title="이력서" title-en="RESUME"></custom-title>
           </div>
         </section>
+
         <div class="quick-wrap collapse" role="tablist">
           <span class="sr-only">바로가기</span>
           <button class="quick-collapse-btn">닫기</button>
@@ -42,7 +38,7 @@
             </li>
             <li class="quick-item">
               <button data-link="section05" role="tab" aria-controls="tabpanel05">보유기술 및 능력</button>
-            </li class="quick-item">
+            </li>
             <li class="quick-item">
               <button data-link="section06" role="tab" aria-controls="tabpanel06">교육이수내역</button>
             </li>
@@ -72,6 +68,50 @@
               <div class="clear"></div>
             </div>
           </div>
+
+          <section class="section">
+            <div class="section-title">
+              <div class="left-box">
+                <h2>이력</h2>
+                <p>career</p>
+              </div>
+              <button>레이아웃</button>
+            </div>
+            <div class="sction-box CARD001">
+              <ul role="list">
+                <c:forEach var="item" items="${work }">                  
+                  <li>
+                    <div class="head">
+                      <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="">
+                      <div class="head-title">㈜사이버이메지네이션</div>
+                    </div>
+                    <dl>
+                      <div class="row">
+                        <dt>근무기간</dt>
+                        <dd>
+                          <span class="date">
+                            <fmt:parseDate value="${item.SDATE }" var="sdate" pattern="yyyyMM" />
+                            <fmt:formatDate value="${sdate }" pattern="yyyy.MM" /> ~
+                            <fmt:parseDate value="${item.EDATE }" var="edate" pattern="yyyyMM" />
+                            <fmt:formatDate value="${edate }" pattern="yyyy.MM" />
+                          </span>
+                          <span class="ticket">${item.WORK_MON }개월</span>
+                        </dd>
+                      </div>
+                      <div class="row">
+                        <dt>담당업무</dt>
+                        <dd>${item.PART }</dd>
+                      </div>
+                      <div class="row">
+                        <dt>근무처명/소속팀</dt>
+                        <dd>${item.WORK_NAME } / ${item.WORK_TEAM }</dd>
+                      </div>
+                    </dl>
+                  </li>
+                </c:forEach>
+              </ul>
+            </div>
+          </section>
 
           <div class="sction-wrap">
             <h2 class="title" id="section02">이력</h2>
@@ -264,22 +304,22 @@
             <div class="section fade" id="tabpanel07" role="tabpanel">
               <div class="school_list">
                 <c:forEach var="item" items="${school }">
-                    <!-- <img src="/common/img/resume/${item.PHOTO }" alt="${item.GUBUN } 사진"> -->
-                      <h5>${item.GUBUN }</h5>
-                      <p>
-                        <c:if test="${item.NAME ne '-' && item.NAME ne '' }">${item.NAME }</c:if>
-                        <c:if test="${item.MAJOR ne '-' && item.MAJOR ne ''}">(${item.MAJOR })</c:if><br>
-                        ${item.ADDR }<br>
-                        <c:if test="${item.RESULTS ne '-' && item.RESULTS ne ''}">${item.RESULTS }</c:if><br>
-                        <fmt:parseDate value="${item.SDATE }" var="sdate" pattern="yyyyMM" />
-                        <fmt:formatDate value="${sdate }" pattern="yyyy년 MM월" />
-                        <c:if test="${item.EDATE ne ''}">
-                          ~
-                          <fmt:parseDate value="${item.EDATE }" var="edate" pattern="yyyyMM" />
-                          <fmt:formatDate value="${edate }" pattern="yyyy년 MM월" />
-                        </c:if>
-                      </p>
-                    <div class="school_bg"></div>
+                  <!-- <img src="/common/img/resume/${item.PHOTO }" alt="${item.GUBUN } 사진"> -->
+                  <h5>${item.GUBUN }</h5>
+                  <p>
+                    <c:if test="${item.NAME ne '-' && item.NAME ne '' }">${item.NAME }</c:if>
+                    <c:if test="${item.MAJOR ne '-' && item.MAJOR ne ''}">(${item.MAJOR })</c:if><br>
+                    ${item.ADDR }<br>
+                    <c:if test="${item.RESULTS ne '-' && item.RESULTS ne ''}">${item.RESULTS }</c:if><br>
+                    <fmt:parseDate value="${item.SDATE }" var="sdate" pattern="yyyyMM" />
+                    <fmt:formatDate value="${sdate }" pattern="yyyy년 MM월" />
+                    <c:if test="${item.EDATE ne ''}">
+                      ~
+                      <fmt:parseDate value="${item.EDATE }" var="edate" pattern="yyyyMM" />
+                      <fmt:formatDate value="${edate }" pattern="yyyy년 MM월" />
+                    </c:if>
+                  </p>
+                  <div class="school_bg"></div>
                 </c:forEach>
               </div>
               <div class="clear"></div>

@@ -1,0 +1,4 @@
+/bin/
+.settings/
+build/
+node_modules/
