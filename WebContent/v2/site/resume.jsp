@@ -83,7 +83,7 @@
                   <li>
                     <div class="head">
                       <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="">
-                      <div class="head-title">㈜사이버이메지네이션</div>
+                      <div class="head-title">${item.WORK_NAME }</div>
                     </div>
                     <dl>
                       <div class="row">
@@ -103,8 +103,8 @@
                         <dd>${item.PART }</dd>
                       </div>
                       <div class="row">
-                        <dt>근무처명/소속팀</dt>
-                        <dd>${item.WORK_NAME } / ${item.WORK_TEAM }</dd>
+                        <dt>소속팀</dt>
+                        <dd>${item.WORK_TEAM }</dd>
                       </div>
                     </dl>
                   </li>
