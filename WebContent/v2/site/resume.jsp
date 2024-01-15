@@ -70,39 +70,39 @@
           </div>
 
           <section class="section">
-            <div class="section-title">
+            <div class="component-title">
               <div class="left-box">
-                <h2>이력</h2>
-                <p>career</p>
+                <h2 class="cmp-title__text">이력</h2>
+                <p class="cmp-title__eng">career</p>
               </div>
-              <button>레이아웃</button>
+              <button class="right-box">레이아웃</button>
             </div>
-            <div class="section-box CARD001">
-              <ul role="list">
+            <div class="component CARD001">
+              <ul class="cmp-list__wrap" role="list">
                 <c:forEach var="item" items="${work }">                  
-                  <li>
-                    <div class="head">
-                      <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="">
-                      <div class="head-title">${item.WORK_NAME }</div>
+                  <li class="cmp-list__box">
+                    <div class="c-title">
+                      <img class="c-img" src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="">
+                      <div class="c-title__text">${item.WORK_NAME }</div>
                     </div>
-                    <dl>
-                      <div class="row">
+                    <dl class="c-description">
+                      <div class="c-desc__row">
                         <dt>근무기간</dt>
-                        <dd>
-                          <span class="date">
+                        <dd class="c-desc__rigth">
+                          <span>
                             <fmt:parseDate value="${item.SDATE }" var="sdate" pattern="yyyyMM" />
                             <fmt:formatDate value="${sdate }" pattern="yyyy.MM" /> ~
                             <fmt:parseDate value="${item.EDATE }" var="edate" pattern="yyyyMM" />
                             <fmt:formatDate value="${edate }" pattern="yyyy.MM" />
                           </span>
-                          <span class="ticket">${item.WORK_MON }개월</span>
+                          <span class="cmp-ticket">${item.WORK_MON }개월</span>
                         </dd>
                       </div>
-                      <div class="row">
+                      <div class="c-desc__row">
                         <dt>담당업무</dt>
                         <dd>${item.PART }</dd>
                       </div>
-                      <div class="row">
+                      <div class="c-desc__row">
                         <dt>소속팀</dt>
                         <dd>${item.WORK_TEAM }</dd>
                       </div>
@@ -112,6 +112,76 @@
               </ul>
             </div>
           </section>
+          
+          		
+          <section class="section">
+            <div class="component-title">
+              <div class="left-box">
+                <h2 class="cmp-title__text">보유기술</h2>
+                <p class="cmp-title__eng">skill</p>
+              </div>
+              <button class="right-box">레이아웃</button>
+            </div>
+            <div class="component CARD002">
+              <ul class="cmp-list__wrap" role="list">
+                <c:forEach var="item" items="${skill }">                  
+                  <li class="cmp-list__box">
+                    <div class="c-title">
+                      <img class="c-img" src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="">
+                    </div>
+                    <div class="c-description">
+	                    <div class="c-desc__wrap">
+	                      <div class="c-desc__title">${item.SKILL_NAME }</div>
+	                      <div class="c-desc__row">${item.MEMO }</div>                      
+	                    </div>
+                    </div>
+                  </li>
+                </c:forEach>
+              </ul>
+            </div>
+          </section>
+          
+          
+          <section class="section">
+            <div class="component-title">
+              <div class="left-box">
+                <h2 class="cmp-title__text">프로젝트 수행</h2>
+                <p class="cmp-title__eng">project</p>
+              </div>
+              <button class="right-box">레이아웃</button>
+            </div>
+            <div class="component GRID001">
+            	<div class="cmp-grid__wrap">
+	              <ul class="cmp-list__wrap" role="list">
+	                <c:forEach var="item" items="${project }">                  
+	                  <li class="cmp-list__box">
+	                    <div class="left-box">
+	                    	<div class="c-title">
+		                     	<h2 class="cmp-title__text">${item.DUTY }</h2>
+	                			<p class="cmp-ticket">${item.ORDER_ORG }</p>
+                			</div>
+                			<div class="c-description">
+			                   	<p class="c-desc">
+				                   	<fmt:parseDate value="${item.SDATE }" var="sdate" pattern="yyyyMMdd" />
+	                        		<fmt:formatDate value="${sdate }" pattern="yyyy.MM.dd" /> ~
+	                        		<fmt:parseDate value="${item.EDATE }" var="edate" pattern="yyyyMMdd" />
+	                        		<fmt:formatDate value="${edate }" pattern="yyyy.MM.dd" />
+			                   	</p>
+			                   	<p class="c-desc">${item.WORK_NAME }</p>    
+			                   	<p class="c-desc">${item.POSITION }</p>                  
+		                    </div>
+	                    </div>
+	                    <div class="right-box">
+	                      <a class="c-button" href="#">View project</a>                 
+	                    </div>
+	                  </li>
+	                </c:forEach>
+	              </ul>
+            	</div>
+            </div>
+          </section>
+          
+          
 
           <div class="sction-wrap">
             <h2 class="title" id="section02">이력</h2>
