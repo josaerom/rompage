@@ -19,7 +19,7 @@
 		<a href="#content" class="dir_container">메뉴 건너 뛰기</a>
 	</div>
 	<!-- header -->
-	<header>
+	<!-- <header>
 		<h1 class="logo"><a href="/"><img src="/v2/image/common/rompage_logo.png" alt="ROMPAGE로고" ><span class="sr-only">롬페이지</span></a></h1>		
 		<nav class="gnb">			
 			<ul class="nav pc">
@@ -54,13 +54,13 @@
 				</li>
 			</ul>
 			<div class="right-menu">
-				<!-- <div class="version">
+				<div class="version">
 					<button type="button" aria-expanded="false">VERSION</button>
 					<ul>
 						<li><a href="/index_v1.jsp">V1.0</a></li>
 						<li><a href="/">V2.0</a></li>
 					</ul>
-				</div> -->
+				</div>
 				<button type="button" class="menu-hamburger" id="hamburger" aria-expanded="false" aria-controls="allMenu">
 					<span></span>
 					<span></span>
@@ -74,7 +74,7 @@
 				<nav class="gnb">
 					<ul class="nav">
 						<li>
-							<!-- <h2>RESUME</h2> -->
+							<h2>RESUME</h2>
 							<button type="button" class="nav-2depth-btn" id="mNav1depth01" aria-expanded="false" aria-controls="mNav2depth01"><h2>RESUME</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth01" role="region" aria-labelledby="mNav1depth01">
 								<ul>
@@ -84,7 +84,7 @@
 							</div>				
 						</li>
 						<li>
-							<!-- <h2>PORTFOLIO</h2> -->
+							<h2>PORTFOLIO</h2>
 							<button type="button" class="nav-2depth-btn" id="mNav1depth02" aria-expanded="false" aria-controls="mNav2depth02"><h2>PORTFOLIO</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth02" role="region" aria-labelledby="mNav1depth02">
 								<ul>
@@ -94,7 +94,7 @@
 							</div>
 						</li>
 						<li>
-							<!-- <h2>ADMIN</h2> -->
+							<h2>ADMIN</h2>
 							<button type="button" class="nav-2depth-btn" id="mNav1depth03" aria-expanded="false" aria-controls="mNav2depth03"><h2>ADMIN</h2></button>
 							<div class="nav-2depth-on" id="mNav2depth03" role="region" aria-labelledby="mNav1depth03">
 								<ul>
@@ -110,7 +110,7 @@
 			</div>
 			<div class="bg-drop"></div>
 		</nav>
-	</header>
+	</header> -->
 	<!-- //header -->
 	
 	<!-- container -->

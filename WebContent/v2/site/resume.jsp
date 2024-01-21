@@ -20,34 +20,7 @@
           </div>
         </section>
 
-        <div class="quick-wrap collapse" role="tablist">
-          <span class="sr-only">바로가기</span>
-          <button class="quick-collapse-btn">닫기</button>
-          <ul class="quick-list">
-            <li class="quick-item">
-              <button data-link="section01" role="tab" aria-controls="tabpanel01">기본정보</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section02" role="tab" aria-controls="tabpanel02">이력</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section03" role="tab" aria-controls="tabpanel03">프로젝트 수행</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section04" role="tab" aria-controls="tabpanel04">자격/면허</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section05" role="tab" aria-controls="tabpanel05">보유기술 및 능력</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section06" role="tab" aria-controls="tabpanel06">교육이수내역</button>
-            </li>
-            <li class="quick-item">
-              <button data-link="section07" role="tab" aria-controls="tabpanel07">학력</button>
-            </li>
-          </ul>
-          <button type="button" class="all-collapse">모두닫기</button>
-        </div>
+        
         <section class="content">
           <div class="sction-wrap">
             <h2 class="title" id="section01">기본정보</h2>
@@ -68,6 +41,35 @@
               <div class="clear"></div>
             </div>
           </div>
+          
+          <div class="quick-wrap collapse" role="tablist">
+	          <span class="sr-only">바로가기</span>
+	          <button class="quick-collapse-btn">닫기</button>
+	          <ul class="quick-list">
+	            <li class="quick-item">
+	              <button data-link="section01" role="tab" aria-controls="tabpanel01">기본정보</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section02" role="tab" aria-controls="tabpanel02">이력</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section03" role="tab" aria-controls="tabpanel03">프로젝트 수행</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section04" role="tab" aria-controls="tabpanel04">자격/면허</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section05" role="tab" aria-controls="tabpanel05">보유기술 및 능력</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section06" role="tab" aria-controls="tabpanel06">교육이수내역</button>
+	            </li>
+	            <li class="quick-item">
+	              <button data-link="section07" role="tab" aria-controls="tabpanel07">학력</button>
+	            </li>
+	          </ul>
+	          <button type="button" class="all-collapse">모두닫기</button>
+	        </div>
 
           <section class="section">
             <div class="component-title">
