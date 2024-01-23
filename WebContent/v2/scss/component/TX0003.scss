@@ -1,0 +1,40 @@
+.TX0003 {
+    background-color: #fff;
+    margin-top: -7px;
+    .c-rolling__txt {
+	    display: inline;
+	    font-size: 21px;
+	    padding-right: 100px;
+	}
+	
+	svg {
+	    vertical-align: middle;
+	        margin-top: -7px;
+	}
+	
+	/* 움직이는 텍스트 */
+	.c-rolling {
+		position: relative;
+		width: 100%;
+		max-width:100%;
+		height: auto;
+		padding:44px 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.c-rolling .c-rolling__wrap {
+		position: absolute;
+		white-space: nowrap;
+		will-change: transform;
+		animation: marquee 30s linear infinite;
+		top: 30px;
+	}
+	@keyframes marquee {
+	  from { transform: translateX(0); }
+	  to { transform: translateX(-50%); }
+	}	
+	.c-rolling__idx {
+	    margin-left: -31px;
+	    padding-right: 21px;
+	}
+}

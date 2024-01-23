@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="section full">
-	<div class="component NT0001 hidden">
+	<div class="component TX0001 hidden">
 		<div class="c-rolling__box">
 			<span class="c-rolling__txt active">ROMPAGE에 오신 것을 환영합니다 🙂</span>
 			<span class="c-rolling__txt">이렇게 만난 것도 인연인데 잘 부탁드려요.</span>
@@ -30,26 +30,25 @@
 				<!-- <embed src="mms://wm-005.cafe24.com/rom88/main.wmv"> -->
 			</div>
 			<div class="c-floating-contents__floating">
-				<div class="c-title__wrap">
-		    		<div class="c-title">
-		    			안녕하세요 <i class="smile"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" class=""><path fill="currentColor" fill-rule="evenodd" d="M50 2.93C24.005 2.93 2.93 24.005 2.93 50S24.005 97.07 50 97.07 97.07 75.995 97.07 50 75.995 2.93 50 2.93ZM9.18 50C9.18 27.456 27.456 9.18 50 9.18S90.82 27.456 90.82 50 72.544 90.82 50 90.82 9.18 72.544 9.18 50Zm29.417-14.964a4.59 4.59 0 1 0-6.491 6.491 4.59 4.59 0 0 0 6.491-6.491Zm29.297 0a4.59 4.59 0 1 0-6.491 6.492 4.59 4.59 0 0 0 6.491-6.492ZM29.167 60.33a3.125 3.125 0 0 0-5.6 2.777 29.505 29.505 0 0 0 52.866 0 3.125 3.125 0 0 0-5.6-2.777 23.253 23.253 0 0 1-41.666 0Z" clip-rule="evenodd"></path></svg></i>
-		    			<br>
-		    			저는
-		    			<div class="c-rolling__wrap">
-			    			<div class="c-rolling__box">
-				    			<span class="c-rolling__txt active">개발자</span>
-				    			<span class="c-rolling__txt">퍼블리셔</span>
-				    			<span class="c-rolling__txt">아티스트</span>
-			    			</div>
+	    		<div class="c-title">
+	    			안녕하세요 <i class="smile"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" class=""><path fill="currentColor" fill-rule="evenodd" d="M50 2.93C24.005 2.93 2.93 24.005 2.93 50S24.005 97.07 50 97.07 97.07 75.995 97.07 50 75.995 2.93 50 2.93ZM9.18 50C9.18 27.456 27.456 9.18 50 9.18S90.82 27.456 90.82 50 72.544 90.82 50 90.82 9.18 72.544 9.18 50Zm29.417-14.964a4.59 4.59 0 1 0-6.491 6.491 4.59 4.59 0 0 0 6.491-6.491Zm29.297 0a4.59 4.59 0 1 0-6.491 6.492 4.59 4.59 0 0 0 6.491-6.492ZM29.167 60.33a3.125 3.125 0 0 0-5.6 2.777 29.505 29.505 0 0 0 52.866 0 3.125 3.125 0 0 0-5.6-2.777 23.253 23.253 0 0 1-41.666 0Z" clip-rule="evenodd"></path></svg></i>
+	    			<br>
+	    			<div class="c-rolling">
+	    			저는
+		    			<div class="c-rolling__box">
+			    			<span class="c-rolling__txt">개발자♡</span>
+			    			<span class="c-rolling__txt">퍼블리셔</span>
+			    			<span class="c-rolling__txt">아티스트</span>
+			    			<span class="c-rolling__txt">개발자♡</span>
 		    			</div>
-		    			조새롬입니다.
-		    		</div>
-		    		<div class="c-desc">
-			    		<p class="c-desc__txt active">
-			    			오늘보다 내일 더 나은 내가 되기 위해<br>
-							오늘도 열심히 개발 중입니다.
-			    		</p>
-		    		</div>
+	    			조새롬입니다.
+	    			</div>
+	    		</div>
+	    		<div class="c-desc">
+		    		<p class="c-desc__txt active">
+		    			오늘보다 내일 더 나은 내가 되기 위해<br>
+						오늘도 열심히 개발 중입니다.
+		    		</p>
 	    		</div>
 	    	</div>
     	</div>
@@ -178,7 +177,7 @@
 					</div>
 					<div class="c-over">
 						<h2 class="c-over__title">이력서</h2>
-						<p class="c-over__desc">저의 정보, 이력, 학력 등. 열심히 살아온 저를 소개합니다.</p>
+						<p class="c-over__desc">열심히 살아온 저를 소개합니다.</p>
 						<div class="c-over__button-wrap">
 							<button class="c-over__btn">jQaury로 구현</button>
 							<button class="c-over__btn">더 알아보기</button>
@@ -284,6 +283,58 @@
 
 <div class="section">
 	<div class="component LS0002">
+		<ul class="cmp-list">
+			<li class="cmp-list__item">
+				<div class="c-slider__top"></div>
+				<h3 class="c-title">접근성</h3>
+				<p class="c-desc">
+					누구나
+					이용할 수 있도록
+				</p>
+			</li>
+			<li class="cmp-list__item order">
+				<h3 class="c-title">크로스 브라우징</h3>
+				<p class="c-desc">
+					모든 브라우저에
+					호환되는
+				</p>
+				<div class="c-slider__buttom"></div>
+			</li>
+			<li class="cmp-list__item">
+				<div class="c-slider__top"></div>
+				<h3 class="c-title">속도 개선</h3>
+				<p class="c-desc">
+					사용자 경험에
+					최적화된
+				</p>
+			</li>
+			<li class="cmp-list__item order">
+				<h3 class="c-title">JAVA</h3>
+				<p class="c-desc">MVC 패턴 구현</p>
+				<div class="c-slider__buttom"></div>
+			</li>
+			<li class="cmp-list__item">
+				<div class="c-slider__top"></div>
+				<h3 class="c-title">DATABASE</h3>
+				<p class="c-desc">
+					MYSql을 통한
+					데이터 관리
+				</p>
+			</li>
+			<li class="cmp-list__item order">
+				<h3 class="c-title">FRONT</h3>
+				<p class="c-desc">
+					React, Nextjs, Veujs,
+					jQuery, Vanilajs
+				</p>
+				<div class="c-slider__buttom"></div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="section">
+	<div class="component BN0003">
 		<div class="cmp-section">
 			<div class="cmp-section__left">
 				<img src="/v2/image/main/ls0002.jpg" class="c-image" alt="메인이미지" />
@@ -291,10 +342,39 @@
 			<div class="cmp-section__right">
 				<div class="c-mail">
 					<div class="c-mail__box">
-						<div class="c-mail__title">
-							저에게 하고 싶은 이야기가 있나요?
-							짧은 메시지를 남겨주세요.
-						</div>
+						<div class="c-title c-wave__wrap">
+			    			<div class="c-wave__box">
+							    <span class="c-wave__txt">저</span>
+							    <span class="c-wave__txt">에</span>
+							    <span class="c-wave__txt">게</span>
+							    <span class="c-wave__txt space">하</span>
+							    <span class="c-wave__txt">고</span>
+							    <span class="c-wave__txt">싶</span>
+							    <span class="c-wave__txt">은</span>
+							    <span class="c-wave__txt space">이</span>
+							    <span class="c-wave__txt">야</span>
+							    <span class="c-wave__txt">기</span>
+							    <span class="c-wave__txt">가</span>
+							    <span class="c-wave__txt space">있</span>
+							    <span class="c-wave__txt">나</span>
+							    <span class="c-wave__txt">요</span>
+							    <span class="c-wave__txt">?</span>
+							</div>
+							<div class="c-wave__box">
+							    <span class="c-wave__txt">짧</span>
+							    <span class="c-wave__txt">은</span>
+							    <span class="c-wave__txt space">메</span>
+							    <span class="c-wave__txt">시</span>
+							    <span class="c-wave__txt">지</span>
+							    <span class="c-wave__txt">를</span>
+							    <span class="c-wave__txt space">남</span>
+							    <span class="c-wave__txt">겨</span>
+							    <span class="c-wave__txt space">주</span>
+							    <span class="c-wave__txt">세</span>
+							    <span class="c-wave__txt">요</span>
+							    <span class="c-wave__txt">.</span>
+							</div>		    			
+			    		</div>
 						<div class="c-mail__desc">
 							생각보다 마음이 여립니다.
 							좋은 얘기만 남겨주세요~
