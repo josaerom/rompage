@@ -281,50 +281,56 @@
 <div class="section">
 	<div class="component LS0002">
 		<ul class="cmp-list">
-			<li class="cmp-list__item">
-				<div class="c-slider top"></div>
+			<li class="cmp-list__item top">
+				<img class="c-background" src="/v2/image/main/infographics_01.png">
+				<div class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-01.png"></div>
 				<h3 class="c-title">접근성</h3>
 				<p class="c-desc">
 					누구나
 					이용할 수 있도록
 				</p>
 			</li>
-			<li class="cmp-list__item order">
+			<li class="cmp-list__item order buttom">
+				<img class="c-background" src="/v2/image/main/infographics_02.png">
 				<h3 class="c-title">크로스 브라우징</h3>
 				<p class="c-desc">
 					모든 브라우저에
 					호환되는
 				</p>
-				<div class="c-slider buttom"></div>
+				<div class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-02.png"></div>
 			</li>
-			<li class="cmp-list__item">
-				<div class="c-slider top"></div>
+			<li class="cmp-list__item top">
+				<img class="c-background" src="/v2/image/main/infographics_03.png">
+				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-03.png"></div>
 				<h3 class="c-title">속도 개선</h3>
 				<p class="c-desc">
 					사용자 경험에
 					최적화된
 				</p>
 			</li>
-			<li class="cmp-list__item order">
+			<li class="cmp-list__item order buttom">
+				<img class="c-background" src="/v2/image/main/infographics_04.png">
 				<h3 class="c-title">JAVA</h3>
 				<p class="c-desc">MVC 패턴 구현</p>
-				<div class="c-slider buttom"></div>
+				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-04.png"></div>
 			</li>
-			<li class="cmp-list__item">
-				<div class="c-slider top"></div>
+			<li class="cmp-list__item top">
+				<img class="c-background" src="/v2/image/main/infographics_05.png">
+				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-05.png"></div>
 				<h3 class="c-title">DATABASE</h3>
 				<p class="c-desc">
 					MYSql을 통한
 					데이터 관리
 				</p>
 			</li>
-			<li class="cmp-list__item order">
+			<li class="cmp-list__item order buttom">
+				<img class="c-background" src="/v2/image/main/infographics_06.png">
 				<h3 class="c-title">FRONT</h3>
 				<p class="c-desc">
 					React, Nextjs, Veujs,
 					jQuery, Vanilajs
 				</p>
-				<div class="c-slider buttom"></div>
+				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-06.png"></div>
 			</li>
 		</ul>
 	</div>

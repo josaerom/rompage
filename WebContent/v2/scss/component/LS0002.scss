@@ -1,25 +1,69 @@
 .LS0002 {
     .cmp-list {
-	    column-gap: 3rem;
-	    display: grid;
-	    grid-template-columns: repeat(6, minmax(0, 1fr));
+	    display: flex;
+	    justify-content: center;
 	    &__item {
 		    width: 100px;
-		    height: 250px;
+		    height: 197px;
 		    text-align: center;
-		    margin: 0 auto;
-		    border: 1px solid #000;
+		    margin: 0 15px;
 		    border-radius: 50px;
 		    display: grid;
 	    	cursor: pointer;
 	    	padding: 0 10px;
 	    	word-break: break-word;
+	    	color: #fff;
 	    	&.order > .c-title {
 			    order: 1;
 			}
 		}
 	}
 
+	.c-title {z-index: 1;}
+	
+	.c-desc {
+	    z-index: 1;
+	}
+	
+	.c-background {
+	    position: absolute;
+	    top: -17px;
+	    left: -24px;
+	    
+	}
+	.buttom .c-background {
+		bottom: -17px;
+		top: auto;
+	}
+	.cmp-list__item {
+	    position: relative;
+	}
+	
+	
+	
+	.c-icon {
+	    width: 100%;
+	}
+	
+	.cmp-list__item {
+	    background-color: #f2a227;
+	}
+	
+	.cmp-list__item:nth-child(2) {
+	    background-color: #4fc4d3;
+	}
+	
+	.cmp-list__item:nth-child(3) {
+	    background-color: #41296b;
+	}
+	
+	.cmp-list__item:nth-child(4) {background-color: #3972b9;}
+	
+	.cmp-list__item:nth-child(5) {background-color: #a3cd3a;}
+	
+	.cmp-list__item:nth-child(6) {
+	    background-color: #5a696e;
+	}
 	
 	
 	.c-slider {
@@ -28,34 +72,35 @@
 	    border-radius: 50px;
 	    background: antiquewhite;
 	    position: absolute;	    
+	    z-index: 3;
 	}
-	.top{
+	.top .c-slider{
 		transition: all 1.2s ease-in-out;
-		transform: translate(-11px, 150px);
+		transform: translate(0, 100px);
 	}
-	.buttom{
+	.buttom .c-slider{
 		transition: all 1.2s ease-in-out;
-		transform: translate(-11px, -2px);
+		transform: translate(0, 0);
 	}
 	
 	&.active{
-		.top{
+		.top .c-slider{
 			transition: all 1.2s ease-in-out;
-			transform: translate(-11px, -2px);
+			transform: translate(0, 0);
 		}
-		.buttom{
+		.buttom .c-slider{
 			transition: all 1.2s ease-in-out;
-			transform: translate(-11px, 150px);
+			transform: translate(0, 100px);
 		}
 	}
 	
-	.cmp-list__item:hover .top {
+	.cmp-list__item.top:hover .c-slider {
 		transition: all 0.6s ease-in-out;
-	    transform: translate(-11px, 150px);
+	    transform: translate(0, 100px);
 	}
-	.cmp-list__item:hover .buttom {
+	.cmp-list__item.buttom:hover .c-slider {
 		transition: all 0.6s ease-in-out;
-	    transform: translate(-11px, -2px);
+	    transform: translate(0, 0);
 	}
 	
 	.c-title {
