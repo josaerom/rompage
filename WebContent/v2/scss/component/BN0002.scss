@@ -1,80 +1,118 @@
 @import './common/keyframes';
 
-.BN0002{
-	width: 1440px;
-    margin: 0 auto;
-    padding: 210px 0;
-    
+.BN0002{    
 	.c-section {
 	    column-gap: 3rem;
 	    display: grid;
 	    grid-template-columns: repeat(2, minmax(0, 1fr));
+	    &__right {
+		    display: flex;
+		    flex-flow: column wrap;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		}
 	}
 
-	.c-image__wrap {
-	    text-align: right;
-	}
-	
 	.c-image {
-	    width: 80%;
-	    border-radius: 20px;
+	    text-align: right;
+		&__img {
+		    width: 100%;
+		    border-radius: 20px;
+		}
 	}
 	
-	.c-title {
+	
+	.c-wave {
 	    font-size: 40px;
 	    line-height: 1.2em;
 	    color: #000;
 	    font-weight: 600;
-	}
-	
-	.c-section__right {
-	    display: flex;
-	    flex-flow: column wrap;
-	    -ms-flex-pack: center;
-	    justify-content: center;
+	    &__box {
+		    display:flex;
+		    justify-content: center;
+		}
 	}
 	
 	.c-desc {
 	    margin-top: 10px;
 	    color: rgb(53, 53, 53);
+	    &__box {
+		    height: 3em;
+		    overflow-y: hidden;
+		    display: block;
+		    text-align: center;
+		}
 	}
 	.space {
 	    margin-left: 17px;
 	}
 	
-	.c-desc__box {
-	    height: 3em;
-	    overflow-y: hidden;
-	    display: block;
-	}
-	&.active .c-desc__txt {
-	    animation-name: grow;
-	    animation-duration: 1s;
+	&.active {
+		.c-wave__txt {
+		    font-weight:600;
+		    animation: wave 1.5s ease-in-out;
+		    animation-iteration-count: 1;
+		}
+		.c-image{
+			animation: wave 3s ease-in-out;
+		    animation-iteration-count: 1;
+		}	
+		.c-desc__txt {
+		    animation-name: grow;
+		    animation-duration: 1s;
+		}
 	}
 	
 	@keyframes grow {
 	    from { transform: translateY(3em) }
 	    to { transform: translateY(0) }
 	}
+		
 	
-	.c-wave__box {
-	    display:flex;
+	
+	
+	@include screen(custom, max, $max-sm) {
+		.c-section {
+		    display: block;
+		    position: relative;
+		}
+		
+		.c-image {
+		    text-align: center;
+		}
+		
+		.c-section__right {
+		    position: absolute;
+		    top: 80px;
+		    text-align: center;
+		}
+		
+		.c-wave {
+		    font-size: 29px;
+		    line-height: 1.6em;
+		}
+		
+		.space {
+		    margin-left: 10px;
+		}
+		
+		.c-wave__box {
+		    justify-content: center;
+		}
 	}
 	
-	&.active .c-wave__box .c-wave__txt {
-	    font-weight:600;
-	    animation: wave 1.5s ease-in-out;
-	    animation-iteration-count: 1;
-	}
-	
-	&.active .c-image{
-		animation: wave 3s ease-in-out;
-	    animation-iteration-count: 1;
+	@include screen(custom, max, $min-md) { //768
+		.c-wave {
+		    font-size: 28px;
+		}
+		
+		.space {
+		    margin-left: 12px;
+		}
+		
+		.c-section {
+		    column-gap: 1.3rem;
+		}
 	}
 }
-
-
-
-
-
 

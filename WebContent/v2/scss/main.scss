@@ -1,6 +1,4 @@
 @import './common/utilites';
-@import './main/fullpage';
-@import './main/keenslider';
 
 @import './component/BN0001';
 @import './component/BN0002';
@@ -23,4 +21,193 @@ body{
     &.bg-white {
     	background-color: #fff;
     }
+}
+
+.section{
+	max-width: 1440px;
+    margin: 0 auto;
+    &.full{
+		max-width: 100%;
+		width : 100%;
+		margin: 0;
+	}
+	&:not(.full) .component {
+	    padding: 150px 20px;
+	}
+}
+
+.cmp-footer{
+	.cmp-footer__animation:after {
+	    border-bottom: 5px solid #353535;
+	    bottom: 0;
+	    content: "";
+	    display: block;
+	    left: 0;
+	    width: 100%;
+	    z-index: 5;
+	    position: absolute;
+	}
+	
+	.cmp-footer__animation {
+	    position: relative;
+	}
+	
+	.cmp-footer__info {
+	    display: grid;
+	    grid-template-columns: repeat(2, minmax(0, 1fr));
+	    padding: 55px 35px;
+	}
+	
+	.c-title {
+	    font-size: 110px;
+	    line-height: 1.2em;
+	    font-weight: 600;
+	}
+	
+	.c-desc {
+	    text-align: right;
+	    font-size: 20px;
+	    line-height: 1.2;
+	    position: relative;
+	    padding: 15px 0;
+	}
+	
+	.c-rolling {
+	  &__box {
+	     height: 110px;
+    	margin-bottom: -7px;
+	      overflow: hidden;
+	      position: relative;
+	      display : inline-block;
+	      width: auto;
+	  }
+	
+	  &__txt {
+	      display: block;
+	      padding-bottom: 6px;
+	      -webkit-animation: rollingEng 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	      animation: rollingEng 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+	  }
+  	}
+  	
+  	@keyframes rollingEng {
+	    0.0% {
+	        -webkit-transform: translateY(0px);
+	        transform: translateY(0px)
+	    }
+	
+	    28% {
+	        -webkit-transform: translateY(0px);
+	        transform: translateY(0px)
+	    }
+	
+	    42% {
+	        -webkit-transform: translateY(-150px);
+	        transform: translateY(-150px)
+	    }
+	
+	    56% {
+	        -webkit-transform: translateY(-150px);
+	        transform: translateY(-150px)
+	    }
+	
+	    70% {
+	        -webkit-transform: translateY(-280px);
+	        transform: translateY(-280px)
+	    }
+	
+	    84% {
+	        -webkit-transform: translateY(-280px);
+	        transform: translateY(-280px)
+	    }
+	
+	    99.9999% {
+	        -webkit-transform: translateY(-412px);
+	        transform: translateY(-412px)
+	    }
+	
+	    100.0% {
+	        -webkit-transform: translateY(-412px);
+	        transform: translateY(-412px)
+	    }
+	}
+	
+
+	@include screen(custom, max, $max-md) {
+		.c-title {
+		    font-size: 70px;
+		}
+		
+		.c-rolling__box {
+		    height: 70px;
+		}
+		.c-rolling {		
+		  &__txt {
+		      display: block;
+		      padding-bottom: 6px;
+		      -webkit-animation: rollingEng2 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+		      animation: rollingEng2 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+		  }
+	  	}
+		@keyframes rollingEng2 {
+		    0.0% {
+		        -webkit-transform: translateY(0px);
+		        transform: translateY(0px)
+		    }
+		
+		    28% {
+		        -webkit-transform: translateY(0px);
+		        transform: translateY(0px)
+		    }
+		
+		    42% {
+		        -webkit-transform: translateY(-90px);
+		        transform: translateY(-90px)
+		    }
+		
+		    56% {
+		        -webkit-transform: translateY(-90px);
+		        transform: translateY(-90px)
+		    }
+		
+		    70% {
+		        -webkit-transform: translateY(-180px);
+		        transform: translateY(-180px)
+		    }
+		
+		    84% {
+		        -webkit-transform: translateY(-180px);
+		        transform: translateY(-180px)
+		    }
+		
+		    99.9999% {
+		        -webkit-transform: translateY(-270px);
+		        transform: translateY(-270px)
+		    }
+		
+		    100.0% {
+		        -webkit-transform: translateY(-270px);
+		        transform: translateY(-270px)
+		    }
+		}
+	}
+	
+	@include screen(custom, max, $min-md) {
+		.cmp-footer__info {
+		    grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+		
+		.c-desc {
+		    text-align: left;
+		    padding: 39px 0;
+		}
+	}
+	
+	@include screen(custom, max, $min-md) { //768
+		text-align: center;
+				.c-desc {
+		    text-align: center;
+		}
+	}
+	
 }

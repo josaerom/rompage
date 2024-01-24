@@ -58,6 +58,20 @@ $max-lg : 1199;
 $min-xl : 1200;
 $max-tb : 1325;
 
+
+$maximum: 1920px !default;
+$minimum: 320px !default;
+$tablet: 1279px !default;
+$tablet-l : 1366px;			// ipad pro landscape
+$tablet-pro-p: 1024; // ipad pro portrait
+$tablet-p : 768px;			// ipad
+$mobile: 768px !default;
+$phone: 620px !default;
+$mobile-l : 667px;			// galaxy fold landscape
+$mobile-p : 375px;			// iphone 6+
+$mobile-android : 360px;	// gallaxy old devices
+$mobile-p-big : 414px; 		// iphone plus latest devices
+
 // Extend
 %clearfix {*zoom: 1;&:before, &:after {content: " ";display: table;}&:after {clear: both;}}
 %uppercase {text-transform:uppercase;}
@@ -91,8 +105,8 @@ $max-tb : 1325;
 }
 
 // font-family : use font-family mixin instead of below variable
-$font-default : 'SeoulNamsan', 'spoqa han sans','AppleGothic','sans-serif','Helvetica';
-$font-eng : 'Montserrat','AppleGothic','sans-serif','Helvetica';
+$font-default : 'SeoulNamsan','AppleGothic','sans-serif','Helvetica';
+$font-eng : 'SeoulNamsan','AppleGothic','sans-serif','Helvetica';
 
 
 @mixin font-family($font, $sytle:normal) {

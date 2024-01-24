@@ -1,14 +1,11 @@
 .LS0001{
-	width: 1440px;
-    margin: 0 auto;
-    padding: 210px 0;
     
     .c-title__wrap {
 	    text-align: center;
 	    padding: 20px 0;
 	}
     .cmp-list {
-	    column-gap: 3rem;
+	    column-gap: 1.2rem;
 	    display: grid;
 	    grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
@@ -40,7 +37,6 @@
 	    font-size: 20px;
 	    font-weight: 600;
 	    color: #000;
-	    opacity: var(--LS0002-title-opacity);
 	}
 	
 	.c-floating-contents {
@@ -62,6 +58,8 @@
 	    transition-property: opacity;
 	    transition-timing-function: cubic-bezier(.4,0,.2,1);
 	    transition-duration: .5s;
+	    padding: 0 20px;
+    	word-break: keep-all;
 	}
 	
 	.cmp-list__item {
@@ -112,4 +110,34 @@
 	    transform: scale(1.1);
 	}
 	
+	@include screen(custom, max, $max-md) {
+		.c-over__title {
+		    font-size: 25px;
+		}
+		
+		.c-over__btn {
+		    padding: 1rem 2rem;
+		}
+		.cmp-list {
+		    column-gap: 1.2rem;
+		}
+		
+	}
+	@include screen(custom, max, $min-md) {
+		.cmp-list {
+		    grid-template-columns: repeat(2, minmax(0, 1fr));
+		    row-gap: 1.2rem;
+		}
+		.c-over {
+		    opacity: 1;
+		    background: transparent;
+		    padding: 48px 0;
+		}
+		.c-floating-contents__floating {
+		    display: none;
+		}
+		.c-over__desc {
+		    flex: auto;
+		}
+	}
 }

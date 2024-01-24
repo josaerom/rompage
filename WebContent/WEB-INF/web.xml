@@ -33,6 +33,8 @@
         <url-pattern>*.png</url-pattern>
         <url-pattern>*.ico</url-pattern>
         <url-pattern>*.swf</url-pattern>
+        <url-pattern>*.mp4</url-pattern>
+        <url-pattern>*.woff</url-pattern>
     </servlet-mapping>
 	<servlet>
 	    <description></description>

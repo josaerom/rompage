@@ -1,14 +1,12 @@
 .TX0002{
+    padding: 150px 0;
 	.c-title__wrap {
 	    text-align: center;
 	    padding: 20px 0;
 	}
 	.c-floating-contents {
 	    position: relative;
-	    height: 1000px;
 	    &__floating {
-		    position: absolute;
-		    top: 0;
 		    text-align: center;
 		}
 		&__floor {
@@ -41,6 +39,23 @@
 			transform: translate(0, 0);
 		}
 	}
+	@include screen(custom, max, $max-md) {
+		.c-desc {
+		    font-size: 1.3rem;
+		}
+	}
+	@include screen(custom, max, $tablet-pro-p) { //1024
+		.c-desc {
+		    font-size: 1.3rem;
+		}
+	}
+	@include screen(custom, max, $min-md) {
+		.c-desc {
+		    font-size: 16px;
+		    line-height: 2.2;
+		}
+	}
+	
 	
 	
 }

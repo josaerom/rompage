@@ -1,11 +1,8 @@
 @import './common/keyframes';
 
 .BN0003{
-	width: 1440px;
-    margin: 0 auto;
-    padding: 210px 0;
 	.cmp-section {
-	    column-gap: 3rem;
+	    column-gap: 1.3rem;
 	    display: grid;
 	    grid-template-columns: repeat(2, minmax(0, 1fr));
 	    padding: 0;
@@ -13,8 +10,22 @@
 	}
 	
 	.c-image {
-	    width: 100%;
+	    -o-object-fit: cover;
+	    object-fit: cover;
+	    display: block;
+	    height: calc(100% + 1px);
+	    left: 50%;
+	    position: absolute;
+	    top: 50%;
+	    transform: translate3d(-50%,-50%,0);
+	    transition: opacity .3s ease-out;
+	    width: calc(100% + 1px);
+	    z-index: 1;
 	    border-radius: 30px;
+	}
+
+	.cmp-section__left {
+	    position: relative;
 	}
 	
 	.c-mail {
@@ -25,8 +36,8 @@
 	    padding-left: 20%;
 	    padding-right: 20%;
 	    text-align: center;
-	    padding-bottom: 2.5rem;
-	    padding-top: 2.5rem;
+	    padding-bottom: 5.5rem;
+    	padding-top: 5.5rem;
 	    overflow: hidden;
 	    justify-content: center;
 	    display: flex;
@@ -92,17 +103,34 @@
 	    animation-iteration-count: 1;
 	}
 	
-	.c-wave__box {
+	.c-wave {
 	    display:flex;
+	    justify-content: center;
 	}
 	
-	&.active .c-wave__box .c-wave__txt {
-	    font-weight:600;
-	    animation: wave 1.5s ease-in-out;
-	    animation-iteration-count: 1;
+	&.active .c-wave {
+		&__txt {
+		    font-weight:600;
+		    animation: wave 1.5s ease-in-out;
+		    animation-iteration-count: 1;
+	    }
 	}
 	
 	.space {
 	    margin-left: 17px;
+	}
+	
+	@include screen(custom, max, $min-md) {
+		.c-title {
+		    font-size: 20px;
+		}
+		
+		.space {
+		    margin-left: 9px;
+		}
+		.cmp-section {
+		    grid-template-columns: repeat(1, minmax(0, 1fr));
+		    row-gap: 1rem;
+		}
 	}
 }

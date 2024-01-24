@@ -1,48 +1,59 @@
 .LS0002 {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 210px 0;
-    
     .cmp-list {
-    column-gap: 3rem;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+	    column-gap: 3rem;
+	    display: grid;
+	    grid-template-columns: repeat(6, minmax(0, 1fr));
+	    &__item {
+		    width: 100px;
+		    height: 250px;
+		    text-align: center;
+		    margin: 0 auto;
+		    border: 1px solid #000;
+		    border-radius: 50px;
+		    display: grid;
+	    	cursor: pointer;
+	    	padding: 0 10px;
+	    	word-break: break-word;
+	    	&.order > .c-title {
+			    order: 1;
+			}
+		}
 	}
 
-	.cmp-list__item {
-	    width: 100px;
-	    height: 250px;
-	    text-align: center;
-	    margin: 0 auto;
-	    border: 1px solid #000;
-	    border-radius: 50px;
-	    display: grid;
-    	cursor: pointer;
-    	padding: 0 10px;
-    	word-break: break-word;
-	}
 	
-	.c-slider__top, .c-slider__buttom {
+	
+	.c-slider {
 	    width: 100px;
 	    height: 100px;
 	    border-radius: 50px;
 	    background: antiquewhite;
 	    position: absolute;	    
 	}
-	.c-slider__top{
-		transition: all 1.2s ease-in-out;
-		transform: translate(-11px, -2px);
-	}
-	.c-slider__buttom{
+	.top{
 		transition: all 1.2s ease-in-out;
 		transform: translate(-11px, 150px);
 	}
+	.buttom{
+		transition: all 1.2s ease-in-out;
+		transform: translate(-11px, -2px);
+	}
 	
-	.cmp-list__item:hover .c-slider__top {
+	&.active{
+		.top{
+			transition: all 1.2s ease-in-out;
+			transform: translate(-11px, -2px);
+		}
+		.buttom{
+			transition: all 1.2s ease-in-out;
+			transform: translate(-11px, 150px);
+		}
+	}
+	
+	.cmp-list__item:hover .top {
 		transition: all 0.6s ease-in-out;
 	    transform: translate(-11px, 150px);
 	}
-	.cmp-list__item:hover .c-slider__buttom {
+	.cmp-list__item:hover .buttom {
 		transition: all 0.6s ease-in-out;
 	    transform: translate(-11px, -2px);
 	}
@@ -61,8 +72,11 @@
 	    -ms-flex-pack: center;
 	}
 	
-	.cmp-list__item.order > .c-title {
-	    order: 1;
+	@include screen(custom, max, $min-md) {
+		.cmp-list {
+		    grid-template-columns: repeat(3, minmax(0, 1fr));
+		    row-gap: 3rem;
+		}
 	}
 }
 
