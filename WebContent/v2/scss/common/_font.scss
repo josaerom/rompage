@@ -24,7 +24,8 @@
 
 @font-face {
     font-family: 'SeoulNamsan';
-    src: url('/v2/font/SeoulNamsanM.woff') format('woff');
+    src: url('/v2/font/SeoulNamsanM.woff2') format('woff2'), 
+    url('/v2/font/SeoulNamsanM.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
