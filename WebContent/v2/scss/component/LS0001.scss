@@ -110,7 +110,7 @@
 	    transform: scale(1.1);
 	}
 	
-	@include screen(custom, max, $max-md) {
+	@include screen(custom, max, $max-md) { //991
 		.c-over__title {
 		    font-size: 25px;
 		}
@@ -123,7 +123,7 @@
 		}
 		
 	}
-	@include screen(custom, max, $min-md) {
+	@include screen(custom, max, $max-sm) { //767
 		.cmp-list {
 		    grid-template-columns: repeat(2, minmax(0, 1fr));
 		    row-gap: 1.2rem;
@@ -138,6 +138,12 @@
 		}
 		.c-over__desc {
 		    flex: auto;
+		}
+	}
+	
+	@include screen(custom, max, $max-xs) { //575
+		.cmp-list {
+		    grid-template-columns: repeat(1, minmax(0, 1fr));
 		}
 	}
 }

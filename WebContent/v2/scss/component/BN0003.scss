@@ -52,6 +52,7 @@
 	
 	.c-mail__desc {
 	    padding: 23px 0;
+	    word-break: keep-all;
 	}
 	
 	.c-mail__form-input {
@@ -120,7 +121,19 @@
 	    margin-left: 17px;
 	}
 	
-	@include screen(custom, max, $min-md) {
+	@include screen(custom, max, $max-md) { //991
+		.c-title {
+		    font-size: 25px;
+		}
+		.space {
+			margin-left: 10px;
+		}
+		.c-mail {
+		    padding-left: 20px;
+		    padding-right: 20px;
+		}
+	}
+	@include screen(custom, max, $max-sm) { //767
 		.c-title {
 		    font-size: 20px;
 		}
@@ -131,6 +144,16 @@
 		.cmp-section {
 		    grid-template-columns: repeat(1, minmax(0, 1fr));
 		    row-gap: 1rem;
+		}
+		 .c-image {
+		    position: relative;
+		}
+	}
+	@include screen(custom, max, $mobile-p-big) { //414
+		
+		.c-mail {
+		    padding-bottom: 3.5rem;
+		    padding-top: 3.5rem;
 		}
 	}
 }

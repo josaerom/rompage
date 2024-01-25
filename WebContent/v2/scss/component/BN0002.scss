@@ -35,6 +35,7 @@
 	
 	.c-desc {
 	    margin-top: 10px;
+	    padding: 0 20px;
 	    color: rgb(53, 53, 53);
 	    &__box {
 		    height: 3em;
@@ -71,7 +72,7 @@
 	
 	
 	
-	@include screen(custom, max, $max-sm) {
+	@include screen(custom, max, $max-sm) { //767
 		.c-section {
 		    display: block;
 		    position: relative;
@@ -89,7 +90,7 @@
 		
 		.c-wave {
 		    font-size: 29px;
-		    line-height: 1.6em;
+		    line-height: 1.4em;
 		}
 		
 		.space {
@@ -101,17 +102,29 @@
 		}
 	}
 	
-	@include screen(custom, max, $min-md) { //768
+	@include screen(custom, max, $max-xs) { //575
+		.c-section__right {
+		    position: relative;
+		}
+	}
+	
+	@include screen(custom, max, $mobile-p-big) { //414
+	
+		.c-section__right {
+		    top: 25px;
+		}
 		.c-wave {
-		    font-size: 28px;
+		    font-size: 24px;
+		    line-height: 1.3em;
 		}
+	}
+	
+	@include screen(custom, max, $minimum) { //360
 		
-		.space {
-		    margin-left: 12px;
-		}
 		
-		.c-section {
-		    column-gap: 1.3rem;
+		.c-desc {
+		    padding: 0 20px;
+		    word-break: keep-all;
 		}
 	}
 }

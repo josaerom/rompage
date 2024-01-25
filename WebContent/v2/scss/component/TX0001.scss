@@ -46,4 +46,10 @@
 	    	height: 20px;
 	    }
 	}
+	
+	@include screen(custom, max, $minimum) { //360
+		.c-rolling {
+		    font-size: inherit;
+		}
+	}
 }

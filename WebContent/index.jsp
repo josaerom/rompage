@@ -145,7 +145,7 @@
 	    		<div class="c-desc">
 	    			<div class="c-desc__box">	
 	    				<p class="c-desc__txt">	    			
-		    			끊임없이 배우고 발전을 멈추지 않는 준비된 개발자를 찾고 계신다면<br>
+		    			발전을 멈추지 않는 개발자를 찾고 계신다면<br>
 						저와의 만남이 최고의 행운이 될 거예요.
 						</p>
 	    			</div>
@@ -280,10 +280,15 @@
 
 <div class="section">
 	<div class="component LS0002">
+		<div class="c-title__wrap">
+		    <div class="c-title">
+		    	A ROMPAGE INFO
+   			</div>
+   		</div>
 		<ul class="cmp-list">
 			<li class="cmp-list__item top">
 				<img class="c-background" src="/v2/image/main/infographics_01.png">
-				<div class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-01.png"></div>
+				<button class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-01.png"></button>
 				<h3 class="c-title">접근성</h3>
 				<p class="c-desc">
 					누구나
@@ -297,11 +302,11 @@
 					모든 브라우저에
 					호환되는
 				</p>
-				<div class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-02.png"></div>
+				<button class="c-slider"><img class="c-icon" src="/v2/image/main/infographics-icon-02.png"></button>
 			</li>
 			<li class="cmp-list__item top">
 				<img class="c-background" src="/v2/image/main/infographics_03.png">
-				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-03.png"></div>
+				<button class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-03.png"></button>
 				<h3 class="c-title">속도 개선</h3>
 				<p class="c-desc">
 					사용자 경험에
@@ -312,11 +317,11 @@
 				<img class="c-background" src="/v2/image/main/infographics_04.png">
 				<h3 class="c-title">JAVA</h3>
 				<p class="c-desc">MVC 패턴 구현</p>
-				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-04.png"></div>
+				<button class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-04.png"></button>
 			</li>
 			<li class="cmp-list__item top">
 				<img class="c-background" src="/v2/image/main/infographics_05.png">
-				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-05.png"></div>
+				<button class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-05.png"></button>
 				<h3 class="c-title">DATABASE</h3>
 				<p class="c-desc">
 					MYSql을 통한
@@ -330,7 +335,7 @@
 					React, Nextjs, Veujs,
 					jQuery, Vanilajs
 				</p>
-				<div class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-06.png"></div>
+				<button class="c-slider "><img class="c-icon" src="/v2/image/main/infographics-icon-06.png"></button>
 			</li>
 		</ul>
 	</div>

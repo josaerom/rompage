@@ -139,4 +139,68 @@
         transform: translateY(-162px)
     }  
   }
+  
+  @include screen(custom, max, $max-xs) { //575
+  .c-rolling {
+	  
+	  &__txt {
+	      display: block;
+	      padding-bottom: 6px;
+	      -webkit-animation: rollingM 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+	      animation: rollingM 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+	  }
+  	}
+  		.c-title {
+		    font-size: 28px;
+		}
+		
+		.smile {
+		    width: 28px;
+		}
+		
+		.c-rolling__box {
+		    height: 31px;
+		}
+		 @keyframes rollingM {
+		    0.0% {
+		        -webkit-transform: translateY(0px);
+		        transform: translateY(0px)
+		    }
+		
+		    28% {
+		        -webkit-transform: translateY(0px);
+		        transform: translateY(0px)
+		    }
+		
+		    42% {
+		        -webkit-transform: translateY(-35px);
+		        transform: translateY(-40px)
+		    }
+		
+		    56% {
+		        -webkit-transform: translateY(-55px);
+		        transform: translateY(-40px)
+		    }
+		
+		    70% {
+		        -webkit-transform: translateY(-107px);
+		        transform: translateY(-78px)
+		    }
+		
+		    84% {
+		        -webkit-transform: translateY(-107px);
+		        transform: translateY(-78px)
+		    }
+		
+		    99.9999% {
+		        -webkit-transform: translateY(-162px);
+		        transform: translateY(-119px)
+		    }
+		
+		    100.0% {
+		        -webkit-transform: translateY(-162px);
+		        transform: translateY(-119px)
+		    }
+		}
+	}
 }

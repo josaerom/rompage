@@ -16,6 +16,7 @@
 	}
 
 	.c-desc {
+		padding: 0 20px;
 	    font-size: 1.5rem;
 	    line-height: 1.8;
 	    transition: all 0.7s ease-in-out;
@@ -39,23 +40,23 @@
 			transform: translate(0, 0);
 		}
 	}
-	@include screen(custom, max, $max-md) {
-		.c-desc {
-		    font-size: 1.3rem;
-		}
-	}
 	@include screen(custom, max, $tablet-pro-p) { //1024
 		.c-desc {
 		    font-size: 1.3rem;
 		}
 	}
-	@include screen(custom, max, $min-md) {
+	@include screen(custom, max, $max-md) { //991
 		.c-desc {
-		    font-size: 16px;
-		    line-height: 2.2;
+		     font-size: 16px;
+		     line-height: 2.2;
 		}
 	}
-	
-	
+		
+	@include screen(custom, max, $max-xs) { //575
+		.c-desc {
+		    font-size: 14px;
+		    line-height: 2;
+		}
+	}
 	
 }

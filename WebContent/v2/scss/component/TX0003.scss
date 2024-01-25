@@ -36,4 +36,14 @@
 	  from { transform: translateX(0); }
 	  to { transform: translateX(-50%); }
 	}	
+	
+	@include screen(custom, max, $max-sm) { //767
+		.c-rolling__box {
+		    animation: marquee 15s linear infinite;
+		}
+		
+		.c-rolling__txt {
+		    padding-right: 50px;
+		}
+	}
 }

@@ -35,6 +35,13 @@ body{
 	    padding: 150px 20px;
 	}
 }
+@include screen(custom, max, $max-sm) { //767
+	.section{
+		&:not(.full) .component {
+		    padding-bottom: 0 !important;
+		}
+	}
+}
 
 .cmp-footer{
 	.cmp-footer__animation:after {
@@ -192,7 +199,7 @@ body{
 		}
 	}
 	
-	@include screen(custom, max, $min-md) {
+	@include screen(custom, max, $max-sm) { //767
 		.cmp-footer__info {
 		    grid-template-columns: repeat(1, minmax(0, 1fr));
 		}
@@ -201,13 +208,63 @@ body{
 		    text-align: left;
 		    padding: 39px 0;
 		}
-	}
-	
-	@include screen(custom, max, $min-md) { //768
 		text-align: center;
 				.c-desc {
 		    text-align: center;
 		}
 	}
 	
+	
+	
+	
+	@include screen(custom, max, $mobile-p-big) { //414
+	
+		.c-title {
+		    font-size: 50px;
+		}
+	
+		.c-rolling__box {
+		    height: 50px;
+		}
+		.c-rolling {		
+		  &__txt {
+		      display: block;
+		      padding-bottom: 6px;
+		      animation: rollingEng3 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+		  }
+	  	}
+		@keyframes rollingEng3 {
+	        0.0% {
+	            transform: translateY(0px)
+	        }
+	
+	        28% {
+	            transform: translateY(0px)
+	        }
+	
+	        42% {
+	            transform: translateY(-65px)
+	        }
+	
+	        56% {
+	            transform: translateY(-65px)
+	        }
+	
+	        70% {
+	            transform: translateY(-132px)
+	        }
+	
+	        84% {
+	            transform: translateY(-132px)
+	        }
+	
+	        99.9999% {
+	            transform: translateY(-198px)
+	        }
+	
+	        100.0% {
+	            transform: translateY(-198px)
+	        }
+	    }
+	}
 }
