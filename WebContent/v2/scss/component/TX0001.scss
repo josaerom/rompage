@@ -1,55 +1,62 @@
 .TX0001 {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    background-color: rgb(255, 229, 148);
-    &.hidden{
-    	display: none;
-    }
-    .c-rolling{
-	    position: relative;
-	    display: flex;
-	    margin-left: auto;
-	    margin-right: auto;
-	    padding-bottom: 0.5rem;
-	    padding-top: 0.5rem;
-	    align-items: center;
-	    font-size: 1rem;
-	    white-space: nowrap;
-	    text-align: center;
-	    color: #000;
-	    &__txt {
-		    position: absolute;
-		    opacity: 0;
-	    	width: 100%;
-	    	text-align: center;
-		    white-space: nowrap;
-		    transition-property: opacity;
-		    transition-timing-function: cubic-bezier(.4,0,.2,1);
-		    transition-duration: .7s;
-		    &.active{
-			    position: relative;
-			    opacity: 1;
-			    top: 0;
-			    right: 0;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	background-color: rgb(255, 229, 148);
+
+	&.hidden {
+		display: none;
+	}
+
+	.c-rolling {
+		position: relative;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+		align-items: center;
+		font-size: 1rem;
+		white-space: nowrap;
+		text-align: center;
+		color: #000;
+
+		&__txt {
+			position: absolute;
+			opacity: 0;
+			width: 100%;
+			text-align: center;
+			white-space: nowrap;
+			transition-property: opacity;
+			transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+			transition-duration: .7s;
+
+			&.active {
+				position: relative;
+				opacity: 1;
+				top: 0;
+				right: 0;
 			}
 		}
-    }
-	.c-button {
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    padding: 8px;
-	    padding-right: 20px;
-	    &__close {
-	    	width: 20px;
-	    	height: 20px;
-	    }
 	}
-	
-	@include screen(custom, max, $minimum) { //360
+
+	.c-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 8px;
+		padding-right: 20px;
+
+		&__close {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	@include screen(custom, max, $minimum) {
+		//360
 		.c-rolling {
-		    font-size: inherit;
+			font-size: inherit;
 		}
 	}
 }
